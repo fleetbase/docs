@@ -6,8 +6,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-    title: 'Fleetbase Docs',
-    tagline: 'Digital infrastructure for logistics',
+    title: 'Fleetbase Guides',
+    tagline: 'Open Source Platform & Infrastructure for Supply Chain and Logistics',
     favicon: 'img/fleetbase-icon.png',
 
     // Set the production url of your site here
@@ -76,7 +76,7 @@ const config = {
                         position: 'left',
                         label: 'Documentation',
                     },
-                    { href: 'https://docs.fleetbase.dev/api', label: 'API Reference', position: 'left' },
+                    { href: 'https://fleetbase.github.io/api-reference', label: 'API Reference', position: 'left' },
                     { href: 'https://discord.gg/V39d5X9z', label: 'Community', position: 'left' },
                     {
                         href: 'https://github.com/fleetbase/fleetbase',
@@ -89,17 +89,37 @@ const config = {
                 style: 'dark',
                 links: [
                     {
-                        title: 'Docs',
+                        title: 'Product',
                         items: [
                             {
-                                label: 'Tutorial',
-                                to: '/docs/intro',
+                                label: 'Cloud',
+                                href: 'https://console.fleetbase.io',
+                            },
+                            {
+                                label: 'Open Source',
+                                href: 'https://github.com/fleetbase/fleetbase',
+                            },
+                            {
+                                label: 'Use Cases',
+                                href: 'https://github.com/fleetbase/fleetbase#-use-cases',
+                            },
+                            {
+                                label: 'Pricing',
+                                href: 'https://www.fleetbase.io/pricing',
                             },
                         ],
                     },
                     {
-                        title: 'Community',
+                        title: 'Learn',
                         items: [
+                            {
+                                label: 'Guides',
+                                href: '/category/system-guides',
+                            },
+                            {
+                                label: 'API Reference',
+                                href: 'https://fleetbase.github.io/api-reference/',
+                            },
                             {
                                 label: 'Discord',
                                 href: 'https://discord.gg/V39d5X9z',
@@ -108,22 +128,35 @@ const config = {
                                 label: 'Github',
                                 href: 'https://github.com/fleetbase',
                             },
+                        ],
+                    },
+                    {
+                        title: 'Apps',
+                        items: [
                             {
-                                label: 'Twitter',
-                                href: 'https://twitter.com/fleetbase_io',
+                                label: 'Storefront App',
+                                href: 'https://github.com/fleetbase/storefront-app',
+                            },
+                            {
+                                label: 'Navigator App',
+                                href: 'https://github.com/fleetbase/navigator-app',
                             },
                         ],
                     },
                     {
-                        title: 'More',
+                        title: 'Social',
                         items: [
                             {
                                 label: 'Blog',
-                                to: '/blog',
+                                href: 'https://www.fleetbase.io/blog',
                             },
                             {
                                 label: 'GitHub',
                                 href: 'https://github.com/fleetbase',
+                            },
+                            {
+                                label: 'Twitter',
+                                href: 'https://twitter.com/fleetbase_io',
                             },
                         ],
                     },
