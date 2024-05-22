@@ -1,26 +1,28 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const { themes } = require('prism-react-renderer');
+const lightTheme = themes.github;
+const darkTheme = themes.dracula;
 const isGithubPagesEnv = process.env.GITHUB_PAGES_ENV === 'true';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-    title: 'Fleetbase Guides',
-    tagline: 'Open Source Platform & Infrastructure for Supply Chain and Logistics',
+    title: 'Fleetbase',
+    tagline: 'Modular logistics and supply chain operating system (LSOS)',
     favicon: 'img/fleetbase-icon.png',
 
     // Set the production url of your site here
     url: 'https://fleetbase.github.io',
     // Set the /<baseUrl>/ pathname under which your site is served
     // For GitHub pages deployment, it is often '/<projectName>/'
-    baseUrl: isGithubPagesEnv ? '/guides/' : '/',
+    // baseUrl: isGithubPagesEnv ? '/docs/' : '/',
+    baseUrl: '/',
 
     // GitHub pages deployment config.
     // If you aren't using GitHub pages, you don't need these.
     organizationName: 'fleetbase', // Usually your GitHub org/user name.
-    projectName: 'guides', // Usually your repo name.
+    projectName: 'docs', // Usually your repo name.
     deploymentBranch: 'gh-pages',
 
     onBrokenLinks: 'throw',
@@ -65,17 +67,17 @@ const config = {
             // Replace with your project's social card
             image: 'img/fleetbase_icon.png',
             navbar: {
-                title: 'Fleetbase Docs',
+                title: 'Fleetbase',
                 logo: {
-                    alt: 'Fleetbase Docs',
+                    alt: 'Fleetbase',
                     src: 'img/fleetbase_icon.png',
                 },
                 items: [
                     {
                         type: 'doc',
-                        docId: 'intro',
+                        docId: 'introduction',
                         position: 'left',
-                        label: 'Documentation',
+                        label: 'Docs',
                     },
                     { href: 'https://fleetbase.github.io/api-reference', label: 'API Reference', position: 'left' },
                     { href: 'https://discord.gg/V39d5X9z', label: 'Community', position: 'left' },
@@ -165,8 +167,9 @@ const config = {
                 copyright: `Copyright © ${new Date().getFullYear()} Fleetbase`,
             },
             prism: {
-                theme: lightCodeTheme,
-                darkTheme: darkCodeTheme,
+                additionalLanguages: ['bash', 'diff', 'json'],
+                theme: lightTheme,
+                darkTheme: darkTheme,
             },
         }),
 };
