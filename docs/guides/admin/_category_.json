@@ -1,6 +1,6 @@
 {
-    "label": "Fleet-Ops",
-    "position": 2,
+    "label": "Admin",
+    "position": 7,
     "link": {
         "type": "generated-index",
         "description": "Getting Started with using Fleetbase"
