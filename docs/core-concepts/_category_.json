@@ -3,6 +3,6 @@
     "position": 4,
     "link": {
         "type": "generated-index",
-        "description": "Getting Started with using Fleetbase"
+        "description": "This section is designed to provide you with a foundational understanding of the Fleetbase platform, covering key aspects of its architecture, how to install and configure the system, manage upgrades, and troubleshoot common issues."
     }
 }
