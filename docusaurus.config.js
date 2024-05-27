@@ -115,10 +115,10 @@ const config = {
                     {
                         title: 'Learn',
                         items: [
-                            {
-                                label: 'Guides',
-                                href: '/category/system-guides',
-                            },
+                            // {
+                            //     label: 'Guides',
+                            //     href: '/category/guides',
+                            // },
                             {
                                 label: 'API Reference',
                                 href: 'https://fleetbase.github.io/api-reference/',
