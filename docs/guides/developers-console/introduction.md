@@ -3,41 +3,31 @@ title: Introduction
 sidebar_position: 1
 slug: /guides/console/introduction
 ---
-## What is FleetOps?
+## Overview
 
-FleetOps is a dynamic last-mile operations and fleet management system. 
+The Developers console allows you to have an overview of your activity, and create the API Keys and Webhooks you need to integrate and run Fleetbase programatically.
 
-### Dashboard
+1. **Insights** - View API insights.
 
-The Dashboard is your central place for operations. 
+![Alt text](image.png)
 
-- View Drivers on Map
-- Create Orders
-- View Orders
-- View Service Areas
-- Create Service Areas
-- Export Orders
+2. **API Keys** - Create and view API Keys. 
 
-### Service Rates
+![Alt text](image-1.png)
 
-### Scheduler
+3. **Webhooks** - Create and view webhook endpoints.
 
-### Drivers
+![Alt text](image-2.png)
 
-### Vehicles
+4. **WebSockets** - View your webhooks success and errors.
 
-### Fleets
+![Alt text](image-3.png)
 
-### Vendors
+5. **Logs** - View all of the logs for your account.
 
-### Contacts
+![Alt text](image-4.png)
 
-### Places
+6. **Events** - View all of the logs for your account.
 
-### Fuel Reports
-
-### Issues
-
-### Navigator App
-
+![Alt text](image-5.png)
 
