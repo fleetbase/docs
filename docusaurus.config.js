@@ -66,7 +66,7 @@ const config = {
                 route: '/api',
                 configuration: {
                     spec: {
-                        url: 'https://raw.githubusercontent.com/fleetbase/docs/ron-v1-docs/static/openapi/fleetbase-api-latest.json',
+                        url: 'https://raw.githubusercontent.com/fleetbase/docs/main/static/openapi/fleetbase-api-latest.json',
                     },
                 },
             },
@@ -79,7 +79,7 @@ const config = {
                 route: '/storefront-api',
                 configuration: {
                     spec: {
-                        url: 'https://raw.githubusercontent.com/fleetbase/docs/ron-v1-docs/static/openapi/storefront-api-latest.json',
+                        url: 'https://raw.githubusercontent.com/fleetbase/docs/main/static/openapi/storefront-api-latest.json',
                     },
                 },
             },
