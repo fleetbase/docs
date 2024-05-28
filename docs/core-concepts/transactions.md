@@ -8,7 +8,7 @@ slug: /core-concepts/transactions
 
 Transactions are a core resource in Fleetbase that handle financial data related to operations where money is involved. They are integral in capturing and managing the financial aspects of service operations.
 
-## Structure of Transactions
+## Structure of an Transaction
 
 - **Transaction Items**: Detail each financial entry related to a transaction, such as subtotals for services rendered.
 

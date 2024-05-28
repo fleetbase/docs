@@ -95,7 +95,7 @@ services:
 
 Ensure your Nginx configuration within Docker utilizes these SSL certificates for HTTPS connections. You will need to modify the `console/nginx.conf` file and rebuild the console container.
 
-## SSL from Source
+### SSL from Source
 
 1. Obtain SSL Certificates:
 Similar to the Docker method, use certbot or manually place your SSL certificates in a secure directory on your server.

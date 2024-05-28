@@ -8,7 +8,7 @@ slug: /core-concepts/places
 
 Places are a foundational resource in Fleetbase, defining physical locations with detailed attributes for comprehensive geographic referencing.
 
-## Attributes of Places
+## Structure of an Place
 
 - **Name, Address Details**: Includes primary and secondary address lines, postal code, province/state, city, and country.
 - **Geographical Coordinates**: Locations can be defined using MySQL POINT or GeoJSON formats.

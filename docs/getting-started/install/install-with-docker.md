@@ -25,7 +25,55 @@ git clone https://github.com/fleetbase/fleetbase.git && cd fleetbase
 
 ### 2. Configure Docker Containers
 
-Edit the docker-compose.yml file to suit production needs. This may involve configuring volumes for persistent data, adjusting environment variables, and ensuring proper network settings are applied.
+Edit or create a `docker-compose.override.yml` file to suit production needs. This may involve configuring volumes for persistent data, adjusting environment variables, and ensuring proper network settings are applied. You can also create a `api/.env` file to configure environment variables for Fleetbase. You can read more about configuration in the [configuration section](/getting-started/configuration) of this guide.
+
+#### Example for Docker (docker-compose.override.yml):
+
+This file can be used to overwrite default environment variables which are set in the `docker-compose.yml` file which ships with Fleetbase.
+
+```yaml
+services:
+  application:
+    environment:
+      - DATABASE_URL=mysql://user:password@db:3306/fleetbase
+      - REDIS_URL=redis://redis:6379
+```
+
+#### Example for Source (.env):
+
+```plaintext
+DATABASE_URL=mysql://user:password@localhost:3306/fleetbase
+REDIS_URL=redis://localhost:6379
+```
+
+#### Environment Variables for Fleetbase
+
+- `APP_URL`: The URL where your Fleetbase API is accessible. For development, you might use localhost.
+- `CONSOLE_HOST`: The URL for the Fleetbase console. This is required for CORS configuration.
+- `DATABASE_URL`: The full database connection URL, including username, password, host, and database name.
+- `STOREFRONT_DB_CONNECTION`: The database connection name for the storefront.
+- `QUEUE_CONNECTION`: Defines the queue backend, which in this case is Redis.
+- `CACHE_DRIVER`: Specifies Redis as the caching backend.
+- `CACHE_PATH`: The file path for storing cache files, useful if file-based caching is used.
+- `CACHE_URL`: The URL for the Redis cache server.
+- `REDIS_URL`: The URL for the Redis server used for caching and queues.
+- `SESSION_DOMAIN`: The domain under which sessions are valid.
+- `BROADCAST_DRIVER`: The technology used for broadcasting real-time messages.
+- `MAIL_FROM_NAME`: Default name used in emails sent by the system.
+- `APP_NAME`: The name of your application.
+- `LOG_CHANNEL`: Specifies how application logging is handled.
+- `MODEL_CACHE_ENABLED`: Toggle to enable/disable model caching.
+- `RESPONSE_CACHE_ENABLED`: Toggle to enable/disable response caching.
+- `RESPONSE_CACHE_DRIVER`: Specifies the caching driver for responses.
+- `MAIL_MAILER`: Defines the mail backend, for example: Sendgrid, SES (Amazon Simple Email Service), Postmark.
+- `IPINFO_API_KEY`: API key for IPInfo service, if used.
+- `GOOGLE_MAPS_API_KEY`: API key for Google Maps services.
+- `GOOGLE_MAPS_LOCALE`: Locale setting for Google Maps.
+- `TWILIO_SID`: Account SID for Twilio, used for sending SMS.
+- `TWILIO_TOKEN`: Authentication token for Twilio.
+- `TWILIO_FROM`: The phone number from which Twilio SMS are sent.
+- `SENTRY_LARAVEL_DSN`: The DSN for Sentry, used for error tracking.
+- `OSRM_HOST`: The OSRM server to use, defaults to https://bundle.routing.fleetbase.io
 
 ### 3. Build and Start Services
 
@@ -57,6 +105,7 @@ Configuration involves setting up environment variables and integrating external
 
 Configure environment variables in the Docker Compose file or a separate .env file for the API:
 
+- `CONSOLE_HOST`: The URL for the Fleetbase console. Required for CORS configuration.
 - `DATABASE_URL`: Full database connection string.
 - `REDIS_URL`: Connection string for Redis.
 - `MAIL_DRIVER`: Set up for production email sending.

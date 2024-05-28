@@ -8,24 +8,24 @@ If you'd like to install and setup Fleetbase without Docker you will need to pro
 
 ## Setup on Debian or Ubuntu
 
-### Install Dependencies
+### 1. Install Dependencies
 ```bash
 sudo apt-get update && apt-get install -y git bind9-utils mycli nodejs npm php php-cli php-fpm git curl build-essential
 ```
 
-### Install Composer
+### 2. Install Composer
 ```bash
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 php composer-setup.php
 sudo mv composer.phar /usr/local/bin/composer
 ```
 
-### Install PNPM & Ember.js CLI
+### 3. Install PNPM & Ember.js CLI
 ```bash
 npm i -g pnpm ember-cli
 ```
 
-### Install FrankenPHP
+### 4. Install FrankenPHP
 
 First, find out the architecture of your Debian system. You can do this with the following command:
 ```bash
@@ -58,11 +58,11 @@ sudo mv frankenphp-linux-x86_64 /usr/local/bin/frankenphp
 frankenphp --version
 ```
 
-### Install SocketCluster
+### 5. Install SocketCluster
 
 SocketCluster is a Node.js based server that enables real-time, bidirectional and event-based communication between clients and the server. Fleetbase uses SocketCluster to enable real-time events and activities such as vehicle tracking.
 
-#### Step 2: Install SocketCluster
+#### Step 1: Install SocketCluster
 Create a directory for your SocketCluster server:
 It's a good practice to keep your applications organized in separate directories.
 ```
@@ -82,7 +82,7 @@ npm init -y
 npm install socketcluster
 ```
 
-#### Step 3: Set Up Your SocketCluster Server
+#### Step 2: Set Up Your SocketCluster Server
 
 1. Create a basic server file:
 Let's create a simple SocketCluster server file. If you installed SocketCluster locally, your project directory is already set. Create a new file named server.js:
@@ -116,7 +116,7 @@ Start your server using Node.js:
 node server.js
 ```
 
-#### Step 4: Configure SocketCluster as a System Service
+#### Step 3: Configure SocketCluster as a System Service
 
 To ensure your SocketCluster server runs continuously and starts at boot, you can set it up as a systemd service.
 
@@ -162,7 +162,7 @@ sudo systemctl status socketcluster.service
 #### Conclusion
 You now have a basic SocketCluster server set up on your Debian system. It's configured to start automatically at boot, and you can customize your server.js to fit the specific requirements of your Fleetbase setup.
 
-### Install MySQL
+### 6. Install MySQL
 
 #### Step 1: Add the MySQL APT Repository
 
@@ -202,7 +202,7 @@ sudo mysql_secure_installation
 
 This script will guide you through some settings that improve MySQL security, such as removing anonymous users and the test database.
 
-### Install Redis
+### 7. Install Redis
 
 #### Step 1: Install Redis
 
@@ -248,15 +248,15 @@ To ensure Redis starts on boot, enable it:
 sudo systemctl enable redis.service
 ```
 
-### Clone Fleetbase
+### 8. Clone Fleetbase
 ```bash
 git clone git@github.com:fleetbase/fleetbase.git /fleetbase
 cd /fleetbase
 ```
 
-### Configure Fleetbase API
+### 9. Configure Fleetbase API
 
-To successfully set up Fleetbase, you need to configure various settings through environment variables. These variables will enable you to tailor the behavior of the Fleetbase system to fit your deployment environment.
+To successfully set up Fleetbase, you need to configure various settings through environment variables. These variables will enable you to tailor the behavior of the Fleetbase system to fit your deployment environment. You can read more about configuration in the [configuration section](/getting-started/configuration) of this guide.
 
 #### Step 1: Access the Configuration File
 
@@ -271,7 +271,7 @@ nano api/.env
 In the .env file, add the following environment variables. These variables are essential for the basic operation of the Fleetbase server:
 
 - `APP_URL`: The URL where your Fleetbase API is accessible. For development, you might use localhost.
-- `CONSOLE_HOST`: The URL for the Fleetbase console.
+- `CONSOLE_HOST`: The URL for the Fleetbase console. Required for CORS configuration.
 - `DATABASE_URL`: The full database connection URL, including username, password, host, and database name.
 - `STOREFRONT_DB_CONNECTION`: The database connection name for the storefront.
 - `QUEUE_CONNECTION`: Defines the queue backend, which in this case is Redis.
@@ -334,7 +334,7 @@ After entering the necessary variables, save and close the file. If you're using
 #### Step 4: Validate Configuration
 Ensure all services mentioned in the .env file are properly installed and running, such as Redis, MySQL, and any external services like Twilio or Sentry. This validation will help you catch any misconfigurations or service interruptions before going live.
 
-### Configure Fleetbase Console
+### 10. Configure Fleetbase Console
 
 Configuring the frontend environment of Fleetbase involves setting various parameters that ensure the frontend communicates correctly with the backend services, such as the API and real-time services like SocketCluster, as well as external services like OSRM.
 
@@ -379,7 +379,7 @@ After configuring the environment variables, save and exit the editor. If you're
 #### Step 4: Validate and Deploy
 After configuring the .env.production file, ensure to validate the settings by testing the frontend connectivity with the backend and other services. Check that all endpoints are reachable and functioning as expected. This step is crucial to prevent runtime issues in a production environment.
 
-### Install and Deploy Fleetbase API
+### 11. Install and Deploy Fleetbase API
 
 #### Step 1: Prepare the Environment
 
@@ -422,7 +422,7 @@ php artisan octane:frankenphp --port=8000 --host=0.0.0.0 --https --http-redirect
 
 This command starts the FrankenPHP server listening on all network interfaces (0.0.0.0), on port 8000, with HTTPS enabled, and uses the specified Caddyfile for server configuration.
 
-### Install and Build Console
+### 12. Install and Build Console
 
 #### Step 1: Navigate to the Console Directory
 
@@ -445,7 +445,7 @@ Compile and build the frontend assets for production. This step generates the st
 pnpm build --environment production
 ```
 
-### Set Up NGINX for the Console
+### 13. Set Up NGINX for the Console
 
 #### Step 1: Install NGINX
 
