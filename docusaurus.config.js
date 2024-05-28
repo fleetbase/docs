@@ -10,7 +10,7 @@ const isGithubPagesEnv = process.env.GITHUB_PAGES_ENV === 'true';
 const config = {
     title: 'Fleetbase',
     tagline: 'Modular logistics and supply chain operating system (LSOS)',
-    favicon: 'img/fleetbase-icon.png',
+    favicon: '/img/fleetbase-icon.png',
 
     // Set the production url of your site here
     url: 'https://fleetbase.github.io',
@@ -22,7 +22,7 @@ const config = {
     // GitHub pages deployment config.
     // If you aren't using GitHub pages, you don't need these.
     organizationName: 'fleetbase', // Usually your GitHub org/user name.
-    projectName: 'docs', // Usually your repo name.
+    projectName: 'docs',
     deploymentBranch: 'gh-pages',
 
     onBrokenLinks: 'throw',
@@ -62,7 +62,7 @@ const config = {
             '@scalar/docusaurus',
             {
                 id: 'fleetbase-api',
-                label: 'Fleetbase API Reference',
+                label: 'Fleetbase API',
                 route: '/api',
                 configuration: {
                     spec: {
@@ -75,8 +75,8 @@ const config = {
             '@scalar/docusaurus',
             {
                 id: 'storefront-api',
-                label: 'Storefront API Reference',
-                route: '/api',
+                label: 'Storefront API',
+                route: '/storefront-api',
                 configuration: {
                     spec: {
                         url: 'https://raw.githubusercontent.com/fleetbase/docs/ron-v1-docs/static/openapi/storefront-api-latest.json',
@@ -104,7 +104,11 @@ const config = {
                         position: 'left',
                         label: 'Docs',
                     },
-                    { href: 'https://discord.gg/V7RVWRQ2Wm', label: 'Community', position: 'left' },
+                    {
+                        href: 'https://discord.gg/V7RVWRQ2Wm',
+                        label: 'Discord',
+                        position: 'right',
+                    },
                     {
                         href: 'https://github.com/fleetbase/fleetbase',
                         label: 'GitHub',
