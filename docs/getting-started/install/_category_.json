@@ -1,0 +1,11 @@
+{
+    "label": "Install Fleetbase",
+    "position": 3,
+    "collapsed": false,
+    "link": {
+        "type": "generated-index",
+        "title": "Install Fleetbase",
+        "description": "This guide will help you to install and setup Fleetbase for your desired setup and environment.",
+        "slug": "/getting-started/install"
+    }
+}

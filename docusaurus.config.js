@@ -10,7 +10,7 @@ const isGithubPagesEnv = process.env.GITHUB_PAGES_ENV === 'true';
 const config = {
     title: 'Fleetbase',
     tagline: 'Modular logistics and supply chain operating system (LSOS)',
-    favicon: 'img/fleetbase-icon.png',
+    favicon: '/img/fleetbase-icon.png',
 
     // Set the production url of your site here
     url: 'https://fleetbase.github.io',
@@ -22,7 +22,7 @@ const config = {
     // GitHub pages deployment config.
     // If you aren't using GitHub pages, you don't need these.
     organizationName: 'fleetbase', // Usually your GitHub org/user name.
-    projectName: 'docs', // Usually your repo name.
+    projectName: 'docs',
     deploymentBranch: 'gh-pages',
 
     onBrokenLinks: 'throw',
@@ -43,21 +43,46 @@ const config = {
             ({
                 docs: {
                     sidebarPath: require.resolve('./sidebars.js'),
-                    // Please change this to your repo.
-                    // Remove this to remove the "edit this page" links.
-                    editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+                    editUrl: 'https://github.com/fleetbase/docs/blob/main/sidebars.js',
                     routeBasePath: '/',
                 },
                 blog: {
                     showReadingTime: true,
-                    // Please change this to your repo.
-                    // Remove this to remove the "edit this page" links.
-                    editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+                    editUrl: 'https://github.com/fleetbase/docs/tree/main/blog',
                 },
                 theme: {
                     customCss: require.resolve('./src/css/custom.css'),
                 },
             }),
+        ],
+    ],
+
+    plugins: [
+        [
+            '@scalar/docusaurus',
+            {
+                id: 'fleetbase-api',
+                label: 'Fleetbase API',
+                route: '/api',
+                configuration: {
+                    spec: {
+                        url: 'https://raw.githubusercontent.com/fleetbase/docs/ron-v1-docs/static/openapi/fleetbase-api-latest.json',
+                    },
+                },
+            },
+        ],
+        [
+            '@scalar/docusaurus',
+            {
+                id: 'storefront-api',
+                label: 'Storefront API',
+                route: '/storefront-api',
+                configuration: {
+                    spec: {
+                        url: 'https://raw.githubusercontent.com/fleetbase/docs/ron-v1-docs/static/openapi/storefront-api-latest.json',
+                    },
+                },
+            },
         ],
     ],
 
@@ -79,8 +104,11 @@ const config = {
                         position: 'left',
                         label: 'Docs',
                     },
-                    { href: 'https://fleetbase.github.io/api-reference', label: 'API Reference', position: 'left' },
-                    { href: 'https://discord.gg/V39d5X9z', label: 'Community', position: 'left' },
+                    {
+                        href: 'https://discord.gg/V7RVWRQ2Wm',
+                        label: 'Discord',
+                        position: 'right',
+                    },
                     {
                         href: 'https://github.com/fleetbase/fleetbase',
                         label: 'GitHub',
@@ -115,10 +143,10 @@ const config = {
                     {
                         title: 'Learn',
                         items: [
-                            {
-                                label: 'Guides',
-                                href: '/category/system-guides',
-                            },
+                            // {
+                            //     label: 'Guides',
+                            //     href: '/category/guides',
+                            // },
                             {
                                 label: 'API Reference',
                                 href: 'https://fleetbase.github.io/api-reference/',
@@ -167,7 +195,7 @@ const config = {
                 copyright: `Copyright © ${new Date().getFullYear()} Fleetbase`,
             },
             prism: {
-                additionalLanguages: ['bash', 'diff', 'json'],
+                additionalLanguages: ['bash', 'diff', 'json', 'php', 'javascript'],
                 theme: lightTheme,
                 darkTheme: darkTheme,
             },

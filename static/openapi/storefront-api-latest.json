@@ -1,0 +1,1221 @@
+{
+    "openapi": "3.0.3",
+    "info": {
+        "title": "Fleetbase Storefront API",
+        "version": "1.0.0",
+        "contact": {}
+    },
+    "servers": [
+        {
+            "url": "https://api.fleetbase.io/storefront/v1"
+        }
+    ],
+    "paths": {
+        "/carts/{id}/{product_id}": {
+            "post": {
+                "tags": ["Cart"],
+                "summary": "Add Item to Cart",
+                "description": "There is two primary ways to create a zone. The first method you can supply the boundary coordinates for the zone. The second method is you cann supply center coordinates and a radius in meters, and Fleetbase will automatically create a zone around the center coordinates.",
+                "operationId": "addItemToCart",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "addons": {
+                                        "type": "array",
+                                        "items": {},
+                                        "example": []
+                                    },
+                                    "quantity": {
+                                        "type": "number",
+                                        "example": 1
+                                    },
+                                    "scheduled_at": {
+                                        "type": "string",
+                                        "example": "scheduled_at_value_here"
+                                    },
+                                    "store_location": {
+                                        "type": "string",
+                                        "example": "store_location_value_here"
+                                    },
+                                    "variants": {
+                                        "type": "array",
+                                        "items": {},
+                                        "example": []
+                                    }
+                                }
+                            },
+                            "examples": {
+                                "Add Item to Cart": {
+                                    "value": {
+                                        "addons": [],
+                                        "quantity": 1,
+                                        "scheduled_at": "scheduled_at_value_here",
+                                        "store_location": "store_location_value_here",
+                                        "variants": []
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                }
+            },
+            "parameters": [
+                {
+                    "name": "id",
+                    "in": "path",
+                    "required": true,
+                    "schema": {
+                        "type": "string",
+                        "example": ""
+                    }
+                },
+                {
+                    "name": "product_id",
+                    "in": "path",
+                    "required": true,
+                    "schema": {
+                        "type": "string",
+                        "example": ""
+                    }
+                }
+            ]
+        },
+        "/carts/{id}": {
+            "get": {
+                "tags": ["Cart"],
+                "summary": "Retrieve a Cart",
+                "description": "This endpoint allows you to retrieve a zone object to view it's details.",
+                "operationId": "retrieveACart",
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                }
+            },
+            "parameters": [
+                {
+                    "name": "id",
+                    "in": "path",
+                    "required": true,
+                    "schema": {
+                        "type": "string",
+                        "example": "{{cart_id}}"
+                    },
+                    "description": "(Required) The id of the zone you want to delete."
+                }
+            ]
+        },
+        "/carts/{id}/{line_item_id}": {
+            "put": {
+                "tags": ["Cart"],
+                "summary": "Update item in Cart",
+                "description": "You can update all properties of the Zone.\n\n",
+                "operationId": "updateItemInCart",
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                }
+            },
+            "delete": {
+                "tags": ["Cart"],
+                "summary": "Remove item from cart",
+                "description": "Use this endpoint to delete a zone.",
+                "operationId": "removeItemFromCart",
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                }
+            },
+            "parameters": [
+                {
+                    "name": "id",
+                    "in": "path",
+                    "required": true,
+                    "schema": {
+                        "type": "string",
+                        "example": ""
+                    }
+                },
+                {
+                    "name": "line_item_id",
+                    "in": "path",
+                    "required": true,
+                    "schema": {
+                        "type": "string",
+                        "example": ""
+                    }
+                }
+            ]
+        },
+        "/carts/{id}/empty": {
+            "put": {
+                "tags": ["Cart"],
+                "summary": "Empty cart",
+                "description": "This endpoint allows you to retrieve a zone object to view it's details.",
+                "operationId": "emptyCart",
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                }
+            },
+            "parameters": [
+                {
+                    "name": "id",
+                    "in": "path",
+                    "required": true,
+                    "schema": {
+                        "type": "string",
+                        "example": ""
+                    }
+                }
+            ]
+        },
+        "/products": {
+            "get": {
+                "tags": ["Products"],
+                "summary": "Query Products",
+                "description": "This endpoint allows you to retrieve a zone object to view it's details.",
+                "operationId": "queryProducts",
+                "parameters": [
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "schema": {
+                            "type": "string",
+                            "example": "25"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/products/{id}": {
+            "get": {
+                "tags": ["Products"],
+                "summary": "Retrieve a Product",
+                "description": "This endpoint allows you to retrieve a zone object to view it's details.",
+                "operationId": "retrieveAProduct",
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                }
+            },
+            "parameters": [
+                {
+                    "name": "id",
+                    "in": "path",
+                    "required": true,
+                    "schema": {
+                        "type": "string",
+                        "example": "{{product_id}}"
+                    }
+                }
+            ]
+        },
+        "/categories": {
+            "get": {
+                "tags": ["Category"],
+                "summary": "List categories",
+                "description": "This endpoint allows you to retrieve a zone object to view it's details.",
+                "operationId": "listCategories",
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/customers/login": {
+            "post": {
+                "tags": ["Customer"],
+                "summary": "Authenticate a Customer ❗",
+                "description": "There is two primary ways to create a zone. The first method you can supply the boundary coordinates for the zone. The second method is you cann supply center coordinates and a radius in meters, and Fleetbase will automatically create a zone around the center coordinates.",
+                "operationId": "authenticateACustomer",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "examples": {
+                                "Authenticate a Customer ❗": {
+                                    "value": "{\n    \"identity\": {{customer_indetity}},\n    \"password\": {{customer_password}}\n}"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/customers/login-with-sms": {
+            "post": {
+                "tags": ["Customer"],
+                "summary": "Authenticate a Customer via SMS",
+                "description": "There is two primary ways to create a zone. The first method you can supply the boundary coordinates for the zone. The second method is you cann supply center coordinates and a radius in meters, and Fleetbase will automatically create a zone around the center coordinates.",
+                "operationId": "authenticateACustomerViaSms",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "examples": {
+                                "Authenticate a Customer via SMS": {
+                                    "value": "{\n    \"phone\": {{customer_phone}}\n}"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/customers/verify-code": {
+            "post": {
+                "tags": ["Customer"],
+                "summary": "Verify a SMS code",
+                "description": "There is two primary ways to create a zone. The first method you can supply the boundary coordinates for the zone. The second method is you cann supply center coordinates and a radius in meters, and Fleetbase will automatically create a zone around the center coordinates.",
+                "operationId": "verifyASmsCode",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "examples": {
+                                "Verify a SMS code": {
+                                    "value": "{\n    \"identity\": {{customer_identity}},\n    \"code\": \"\"\n}"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/customers/request-creation-code": {
+            "post": {
+                "tags": ["Customer"],
+                "summary": "Setups a verification request to create a new storefront customer. ?",
+                "description": "There is two primary ways to create a zone. The first method you can supply the boundary coordinates for the zone. The second method is you cann supply center coordinates and a radius in meters, and Fleetbase will automatically create a zone around the center coordinates.",
+                "operationId": "setupsAVerificationRequestToCreateANewStorefrontCustomer",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "examples": {
+                                "Setups a verification request to create a new storefront customer. ?": {
+                                    "value": "{\n    \"identity\": {{customer_identity}},\n    \"mode\": \"phone\" // phone or email\n}"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/customers/register-device": {
+            "post": {
+                "tags": ["Customer"],
+                "summary": "Register customer device",
+                "description": "There is two primary ways to create a zone. The first method you can supply the boundary coordinates for the zone. The second method is you cann supply center coordinates and a radius in meters, and Fleetbase will automatically create a zone around the center coordinates.",
+                "operationId": "registerCustomerDevice",
+                "parameters": [
+                    {
+                        "name": "customer-token",
+                        "in": "header",
+                        "schema": {
+                            "type": "string",
+                            "example": "{{customer_token}}"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "examples": {
+                                "Register customer device": {
+                                    "value": ""
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/customers": {
+            "get": {
+                "tags": ["Customer"],
+                "summary": "Query customers",
+                "description": "This endpoint allows you to retrieve a zone object to view it's details.",
+                "operationId": "queryCustomers",
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                }
+            },
+            "post": {
+                "tags": ["Customer"],
+                "summary": "Create a Customer",
+                "description": "There is two primary ways to create a zone. The first method you can supply the boundary coordinates for the zone. The second method is you cann supply center coordinates and a radius in meters, and Fleetbase will automatically create a zone around the center coordinates.",
+                "operationId": "createACustomer",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "examples": {
+                                "Create a Customer": {
+                                    "value": "{\n    \"name\": \"John Doe\",\n    \"type\": \"Support\",\n    \"identity\": \"\",\n    \"code\": \"\",\n    \"title\": \"Issue with Product XYZ\",\n    \"email\": {{customer_email}},\n    \"phone\": {{customer_phone}},\n    \"meta\": {}\n}"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/customers/{id}": {
+            "put": {
+                "tags": ["Customer"],
+                "summary": "Update a Customer",
+                "description": "There is two primary ways to create a zone. The first method you can supply the boundary coordinates for the zone. The second method is you cann supply center coordinates and a radius in meters, and Fleetbase will automatically create a zone around the center coordinates.",
+                "operationId": "updateACustomer",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "examples": {
+                                "Update a Customer": {
+                                    "value": "{\n    \"name\": \"John Doe\",\n    \"type\": \"Support\",\n    \"identity\": \"\",\n    \"title\": \"Issue with Product XYZ\",\n    \"email\": {{customer_email}},\n    \"phone\": {{customer_phone}},\n    \"meta\": {}\n}"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                }
+            },
+            "parameters": [
+                {
+                    "name": "id",
+                    "in": "path",
+                    "required": true,
+                    "schema": {
+                        "type": "string",
+                        "example": ""
+                    }
+                }
+            ]
+        },
+        "/customers/places": {
+            "get": {
+                "tags": ["Customer"],
+                "summary": "List a customer saved places",
+                "description": "This endpoint allows you to retrieve a zone object to view it's details.",
+                "operationId": "listACustomerSavedPlaces",
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/customers/orders": {
+            "get": {
+                "tags": ["Customer"],
+                "summary": "List a customer orders",
+                "description": "This endpoint allows you to retrieve a zone object to view it's details.",
+                "operationId": "listACustomerOrders",
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/stores": {
+            "get": {
+                "tags": ["Store"],
+                "summary": "Search Store",
+                "description": "Search Store",
+                "operationId": "searchStore",
+                "parameters": [
+                    {
+                        "name": "query",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "store",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/about": {
+            "get": {
+                "tags": ["Store"],
+                "summary": "About Store",
+                "description": "About Store",
+                "operationId": "aboutStore",
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/gateways": {
+            "get": {
+                "tags": ["Store"],
+                "summary": "Payment gateways for the current store",
+                "description": "Payment gateways for the current store",
+                "operationId": "paymentGatewaysForTheCurrentStore",
+                "parameters": [
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "schema": {
+                            "type": "string",
+                            "example": "25"
+                        }
+                    },
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "schema": {
+                            "type": "string",
+                            "example": "0 "
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/gateways/{id}": {
+            "get": {
+                "tags": ["Store"],
+                "summary": "Specific payment gateway given the id",
+                "description": "Specific payment gateway given the id",
+                "operationId": "specificPaymentGatewayGivenTheId",
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                }
+            },
+            "parameters": [
+                {
+                    "name": "id",
+                    "in": "path",
+                    "required": true,
+                    "schema": {
+                        "type": "string",
+                        "example": ""
+                    }
+                }
+            ]
+        },
+        "/store-locations": {
+            "get": {
+                "tags": ["Store Locations"],
+                "summary": "Query Store Locations",
+                "description": "This endpoint allows you to retrieve a zone object to view it's details.",
+                "operationId": "queryStoreLocations",
+                "responses": {
+                    "200": {
+                        "description": "OK / Delete a Zone",
+                        "headers": {
+                            "Access-Control-Allow-Credentials": {
+                                "schema": {
+                                    "type": "string",
+                                    "example": "true"
+                                }
+                            },
+                            "Access-Control-Allow-Headers": {
+                                "schema": {
+                                    "type": "string",
+                                    "example": "Content-Type, Authorization, Referer, User-Agent, Signature, Customer-Token, Access-Control-Request-Headers, Access-Control-Request-Method, Origin"
+                                }
+                            },
+                            "Access-Control-Allow-Methods": {
+                                "schema": {
+                                    "type": "string",
+                                    "example": "GET, OPTIONS"
+                                }
+                            },
+                            "Access-Control-Max-Age": {
+                                "schema": {
+                                    "type": "string",
+                                    "example": "600"
+                                }
+                            },
+                            "Cache-Control": {
+                                "schema": {
+                                    "type": "string",
+                                    "example": "no-cache, private"
+                                }
+                            },
+                            "Connection": {
+                                "schema": {
+                                    "type": "string",
+                                    "example": "keep-alive"
+                                }
+                            },
+                            "Date": {
+                                "schema": {
+                                    "type": "string",
+                                    "example": "Tue, 02 Jan 2024 06:08:57 GMT"
+                                }
+                            },
+                            "Invalid": {
+                                "schema": {
+                                    "type": "string",
+                                    "example": "1"
+                                }
+                            },
+                            "Server": {
+                                "schema": {
+                                    "type": "string",
+                                    "example": "nginx"
+                                }
+                            },
+                            "Set-Cookie": {
+                                "schema": {
+                                    "type": "string",
+                                    "example": "fleetbase_session=BZTQN5le6WBpsdEIXN5x9dJuLqtxL3hHlFoV8WTH; expires=Tue, 30-Jan-2024 06:08:57 GMT; Max-Age=2419200; path=/; domain=.fleetbase.io; httponly; samesite=lax"
+                                }
+                            },
+                            "Transfer-Encoding": {
+                                "schema": {
+                                    "type": "string",
+                                    "example": "chunked"
+                                }
+                            },
+                            "X-Frame-Options": {
+                                "schema": {
+                                    "type": "string",
+                                    "example": "DENY"
+                                }
+                            },
+                            "X-RateLimit-Limit": {
+                                "schema": {
+                                    "type": "string",
+                                    "example": "60"
+                                }
+                            },
+                            "X-RateLimit-Remaining": {
+                                "schema": {
+                                    "type": "string",
+                                    "example": "58"
+                                }
+                            }
+                        },
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "color": {
+                                            "type": "string",
+                                            "example": "<string>"
+                                        },
+                                        "coordinates": {
+                                            "example": "<string>",
+                                            "anyOf": [
+                                                {
+                                                    "type": "string",
+                                                    "example": "<string>"
+                                                },
+                                                {
+                                                    "type": "array",
+                                                    "items": {},
+                                                    "example": []
+                                                }
+                                            ]
+                                        },
+                                        "created_at": {
+                                            "type": "string",
+                                            "example": "<string>"
+                                        },
+                                        "description": {
+                                            "type": "string",
+                                            "example": "<string>"
+                                        },
+                                        "id": {
+                                            "type": "string",
+                                            "example": "<string>"
+                                        },
+                                        "name": {
+                                            "type": "string",
+                                            "example": "<string>"
+                                        },
+                                        "service_area": {
+                                            "type": "string",
+                                            "nullable": true,
+                                            "example": "<string>"
+                                        },
+                                        "status": {
+                                            "type": "string",
+                                            "example": "<string>"
+                                        },
+                                        "stroke_color": {
+                                            "type": "string",
+                                            "example": "<string>"
+                                        },
+                                        "updated_at": {
+                                            "type": "string",
+                                            "example": "<string>"
+                                        }
+                                    }
+                                },
+                                "examples": {
+                                    "Delete a Zone": {
+                                        "value": {
+                                            "color": "<string>",
+                                            "coordinates": [],
+                                            "created_at": "2024-01-02T05:54:57.000000Z",
+                                            "description": "<string>",
+                                            "id": "zone_bm37E57",
+                                            "name": "Center of Singapore",
+                                            "service_area": null,
+                                            "status": "active",
+                                            "stroke_color": "<string>",
+                                            "updated_at": "2024-01-02T05:54:57.000000Z"
+                                        }
+                                    },
+                                    "OK": {
+                                        "value": {
+                                            "color": "<string>",
+                                            "coordinates": "<string>",
+                                            "created_at": "<string>",
+                                            "description": "<string>",
+                                            "id": "<string>",
+                                            "name": "<string>",
+                                            "service_area": "<string>",
+                                            "status": "<string>",
+                                            "stroke_color": "<string>",
+                                            "updated_at": "<string>"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/service-quotes/from-cart": {
+            "get": {
+                "tags": ["Delivery Service Quote"],
+                "summary": "Retrieve a Delivery Service Quote ❗",
+                "description": "This endpoint allows you to retrieve a zone object to view it's details.",
+                "operationId": "retrieveADeliveryServiceQuote",
+                "parameters": [
+                    {
+                        "name": "origin",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "destination",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "cart",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Delete a Zone",
+                        "headers": {
+                            "Access-Control-Allow-Credentials": {
+                                "schema": {
+                                    "type": "string",
+                                    "example": "true"
+                                }
+                            },
+                            "Access-Control-Allow-Headers": {
+                                "schema": {
+                                    "type": "string",
+                                    "example": "Content-Type, Authorization, Referer, User-Agent, Signature, Customer-Token, Access-Control-Request-Headers, Access-Control-Request-Method, Origin"
+                                }
+                            },
+                            "Access-Control-Allow-Methods": {
+                                "schema": {
+                                    "type": "string",
+                                    "example": "GET, OPTIONS"
+                                }
+                            },
+                            "Access-Control-Max-Age": {
+                                "schema": {
+                                    "type": "string",
+                                    "example": "600"
+                                }
+                            },
+                            "Cache-Control": {
+                                "schema": {
+                                    "type": "string",
+                                    "example": "no-cache, private"
+                                }
+                            },
+                            "Connection": {
+                                "schema": {
+                                    "type": "string",
+                                    "example": "keep-alive"
+                                }
+                            },
+                            "Date": {
+                                "schema": {
+                                    "type": "string",
+                                    "example": "Tue, 02 Jan 2024 06:08:57 GMT"
+                                }
+                            },
+                            "Invalid": {
+                                "schema": {
+                                    "type": "string",
+                                    "example": "1"
+                                }
+                            },
+                            "Server": {
+                                "schema": {
+                                    "type": "string",
+                                    "example": "nginx"
+                                }
+                            },
+                            "Set-Cookie": {
+                                "schema": {
+                                    "type": "string",
+                                    "example": "fleetbase_session=BZTQN5le6WBpsdEIXN5x9dJuLqtxL3hHlFoV8WTH; expires=Tue, 30-Jan-2024 06:08:57 GMT; Max-Age=2419200; path=/; domain=.fleetbase.io; httponly; samesite=lax"
+                                }
+                            },
+                            "Transfer-Encoding": {
+                                "schema": {
+                                    "type": "string",
+                                    "example": "chunked"
+                                }
+                            },
+                            "X-Frame-Options": {
+                                "schema": {
+                                    "type": "string",
+                                    "example": "DENY"
+                                }
+                            },
+                            "X-RateLimit-Limit": {
+                                "schema": {
+                                    "type": "string",
+                                    "example": "60"
+                                }
+                            },
+                            "X-RateLimit-Remaining": {
+                                "schema": {
+                                    "type": "string",
+                                    "example": "58"
+                                }
+                            }
+                        },
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "color": {
+                                            "type": "string",
+                                            "example": "<string>"
+                                        },
+                                        "coordinates": {
+                                            "type": "array",
+                                            "items": {},
+                                            "example": []
+                                        },
+                                        "created_at": {
+                                            "type": "string",
+                                            "example": "2024-01-02T05:54:57.000000Z"
+                                        },
+                                        "description": {
+                                            "type": "string",
+                                            "example": "<string>"
+                                        },
+                                        "id": {
+                                            "type": "string",
+                                            "example": "zone_bm37E57"
+                                        },
+                                        "name": {
+                                            "type": "string",
+                                            "example": "Center of Singapore"
+                                        },
+                                        "service_area": {
+                                            "nullable": true,
+                                            "example": null
+                                        },
+                                        "status": {
+                                            "type": "string",
+                                            "example": "active"
+                                        },
+                                        "stroke_color": {
+                                            "type": "string",
+                                            "example": "<string>"
+                                        },
+                                        "updated_at": {
+                                            "type": "string",
+                                            "example": "2024-01-02T05:54:57.000000Z"
+                                        }
+                                    }
+                                },
+                                "examples": {
+                                    "Delete a Zone": {
+                                        "value": {
+                                            "color": "<string>",
+                                            "coordinates": [],
+                                            "created_at": "2024-01-02T05:54:57.000000Z",
+                                            "description": "<string>",
+                                            "id": "zone_bm37E57",
+                                            "name": "Center of Singapore",
+                                            "service_area": null,
+                                            "status": "active",
+                                            "stroke_color": "<string>",
+                                            "updated_at": "2024-01-02T05:54:57.000000Z"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/checkouts/before": {
+            "get": {
+                "tags": ["Checkout"],
+                "summary": "Before ❗",
+                "description": "Before ❗",
+                "operationId": "before",
+                "parameters": [
+                    {
+                        "name": "gateway",
+                        "in": "query",
+                        "schema": {
+                            "type": "string",
+                            "example": "gateway_value_here"
+                        }
+                    },
+                    {
+                        "name": "customer",
+                        "in": "query",
+                        "schema": {
+                            "type": "string",
+                            "example": "customer_value_here"
+                        }
+                    },
+                    {
+                        "name": "cart",
+                        "in": "query",
+                        "schema": {
+                            "type": "string",
+                            "example": "cart_value_here"
+                        }
+                    },
+                    {
+                        "name": "service_quote",
+                        "in": "query",
+                        "schema": {
+                            "type": "string",
+                            "example": "serviceQuote_value_here"
+                        }
+                    },
+                    {
+                        "name": "cash",
+                        "in": "query",
+                        "schema": {
+                            "type": "string",
+                            "example": "true/false"
+                        }
+                    },
+                    {
+                        "name": "pickup",
+                        "in": "query",
+                        "schema": {
+                            "type": "string",
+                            "example": "true/false"
+                        }
+                    },
+                    {
+                        "name": "tip",
+                        "in": "query",
+                        "schema": {
+                            "type": "string",
+                            "example": "false"
+                        }
+                    },
+                    {
+                        "name": "delivery_tip",
+                        "in": "query",
+                        "schema": {
+                            "type": "string",
+                            "example": "false\n"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/checkouts/capture": {
+            "get": {
+                "tags": ["Checkout"],
+                "summary": "Capture checkout as order ❗",
+                "description": "Capture checkout as order ❗",
+                "operationId": "captureCheckoutAsOrder",
+                "parameters": [
+                    {
+                        "name": "token",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/reviews": {
+            "get": {
+                "tags": ["Reviews"],
+                "summary": "Query Reviews ❗",
+                "description": "Query Reviews ❗",
+                "operationId": "queryReviews",
+                "parameters": [
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "schema": {
+                            "type": "string",
+                            "example": "25"
+                        }
+                    },
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "schema": {
+                            "type": "string",
+                            "example": "0"
+                        }
+                    },
+                    {
+                        "name": "sort",
+                        "in": "query",
+                        "schema": {
+                            "type": "string",
+                            "example": "created_at"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                }
+            },
+            "post": {
+                "tags": ["Reviews"],
+                "summary": "Create a review",
+                "description": "Create a review",
+                "operationId": "createAReview",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "content": {
+                                        "type": "string",
+                                        "example": ""
+                                    },
+                                    "rating": {
+                                        "type": "number",
+                                        "example": 5
+                                    }
+                                }
+                            },
+                            "examples": {
+                                "Create a review": {
+                                    "value": {
+                                        "content": "",
+                                        "rating": 5
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/reviews/count": {
+            "get": {
+                "tags": ["Reviews"],
+                "summary": "Counts the number of ratings for a store",
+                "description": "Counts the number of ratings for a store",
+                "operationId": "countsTheNumberOfRatingsForAStore",
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/reviews/{id}": {
+            "get": {
+                "tags": ["Reviews"],
+                "summary": "Retrieve a Store review",
+                "description": "Retrieve a Store review",
+                "operationId": "retrieveAStoreReview",
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                }
+            },
+            "delete": {
+                "tags": ["Reviews"],
+                "summary": "Delete a Review",
+                "description": "Delete a Review",
+                "operationId": "deleteAReview",
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                }
+            },
+            "parameters": [
+                {
+                    "name": "id",
+                    "in": "path",
+                    "required": true,
+                    "schema": {
+                        "type": "string",
+                        "example": ""
+                    }
+                }
+            ]
+        }
+    },
+    "components": {
+        "securitySchemes": {
+            "apiKey": {
+                "type": "apiKey",
+                "name": "Authorization",
+                "in": "header"
+            }
+        }
+    },
+    "security": [
+        {
+            "apiKey": []
+        }
+    ],
+    "tags": [
+        {
+            "name": "Cart"
+        },
+        {
+            "name": "Products"
+        },
+        {
+            "name": "Category"
+        },
+        {
+            "name": "Customer"
+        },
+        {
+            "name": "Store"
+        },
+        {
+            "name": "Store Locations"
+        },
+        {
+            "name": "Delivery Service Quote"
+        },
+        {
+            "name": "Checkout"
+        },
+        {
+            "name": "Reviews"
+        }
+    ]
+}
