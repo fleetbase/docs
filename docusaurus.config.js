@@ -58,6 +58,7 @@ const config = {
     ],
 
     plugins: [
+        'docusaurus-plugin-image-zoom',
         [
             '@scalar/docusaurus',
             {
@@ -89,13 +90,12 @@ const config = {
     themeConfig:
         /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
         ({
-            // Replace with your project's social card
-            image: 'img/fleetbase_icon.png',
+            image: '/img/fleetbase_icon.png',
             navbar: {
                 title: 'Fleetbase',
                 logo: {
                     alt: 'Fleetbase',
-                    src: 'img/fleetbase_icon.png',
+                    src: '/img/fleetbase_icon.png',
                 },
                 items: [
                     {
@@ -198,6 +198,13 @@ const config = {
                 additionalLanguages: ['bash', 'diff', 'json', 'php', 'javascript'],
                 theme: lightTheme,
                 darkTheme: darkTheme,
+            },
+            zoom: {
+                selector: '.markdown img',
+                background: {
+                    light: 'rgb(255, 255, 255)',
+                    dark: 'rgb(50, 50, 50)',
+                },
             },
         }),
 };
