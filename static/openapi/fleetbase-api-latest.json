@@ -6,7 +6,7 @@
         "version": "1.0.0",
         "contact": {}
     },
-    "servers": [{ "url": "http://localhost:8000/v1" }],
+    "servers": [{ "url": "https://api.fleetbase.io/v1" }],
     "paths": {
         "/places": {
             "get": {

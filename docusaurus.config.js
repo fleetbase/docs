@@ -61,9 +61,27 @@ const config = {
         [
             '@scalar/docusaurus',
             {
-                label: 'API Reference',
+                id: 'fleetbase-api',
+                label: 'Fleetbase API Reference',
                 route: '/api',
-                configuration: {},
+                configuration: {
+                    spec: {
+                        url: 'https://raw.githubusercontent.com/fleetbase/docs/ron-v1-docs/static/openapi/fleetbase-api-latest.json',
+                    },
+                },
+            },
+        ],
+        [
+            '@scalar/docusaurus',
+            {
+                id: 'storefront-api',
+                label: 'Storefront API Reference',
+                route: '/api',
+                configuration: {
+                    spec: {
+                        url: 'https://raw.githubusercontent.com/fleetbase/docs/ron-v1-docs/static/openapi/storefront-api-latest.json',
+                    },
+                },
             },
         ],
     ],
@@ -86,8 +104,7 @@ const config = {
                         position: 'left',
                         label: 'Docs',
                     },
-                    { href: 'https://fleetbase.github.io/api-reference', label: 'API Reference', position: 'left' },
-                    { href: 'https://discord.gg/V39d5X9z', label: 'Community', position: 'left' },
+                    { href: 'https://discord.gg/V7RVWRQ2Wm', label: 'Community', position: 'left' },
                     {
                         href: 'https://github.com/fleetbase/fleetbase',
                         label: 'GitHub',
