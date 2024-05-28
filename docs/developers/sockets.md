@@ -120,6 +120,57 @@ The incoming socket data will be structured like so:
 
 The data will typically be the updated properties of the resource subscribed to, the `event` will name the type of event. For example it could be `driver.location_changed` or `driver.updated`.
 
+## Monitoring Socket Channels
+
+Fleetbase provides a convenient and user-friendly interface for monitoring socket communications and real-time events within your application. This capability is accessible directly through the Developers extension in the Fleetbase console, making it easier to debug and track real-time data flows.
+
+### Accessing the Socket Monitoring Interface
+
+To start monitoring your socket channels, follow these steps:
+
+1. **Navigate to the Developers Section:**
+Log in to your Fleetbase console, and go to the Developers section by selecting it from the main menu.
+
+2. **Open the Web Sockets Page:**
+Click on "Web Sockets" within the Developers section. This action will direct you to a dedicated view that displays all the default channels associated with your organization and each API key.
+
+<div style={{display: 'flex', textAlign: 'center', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+    <img src="/img/view-socket-channels.png" style={{width: '800px'}} />
+</div>
+
+### Monitoring Default Channels
+
+The Web Sockets page will automatically list the default channels used by your organization. This list provides an overview of active channels and helps you understand the typical data traffic and event patterns in your application.
+
+### Listening to Custom Channels
+
+If you need to monitor events on a specific resource channel or inspect custom traffic patterns, the interface allows for on-demand monitoring:
+
+1. **Listen to a Custom Channel:**
+Click the "Listen on custom channel" button. A prompt will appear asking you to enter the name of the channel you wish to monitor.
+
+2. **Enter Channel Name:**
+Type the channel name in the format `{type}.{id}` (e.g., `driver.driver_iox3ekU`) and confirm. This will subscribe you to the channel and start showing real-time events as they occur.
+
+3. **View Event Data:**
+Once subscribed, you will see a live feed of all events passing through the channel, along with their complete JSON data payloads. This feed is invaluable for debugging and verifying that your real-time data handling processes are functioning as expected.
+
+<div style={{display: 'flex', textAlign: 'center', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+    <img src="/img/view-custom-socket-channel.png" style={{width: '800px'}} />
+</div>
+
+<div style={{display: 'flex', textAlign: 'center', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+    <img src="/img/listen-custom-socket-channel.png" style={{width: '800px'}} />
+</div>
+
+### Benefits of Using the Monitoring Tool
+
+- **Real-Time Insights**: Gain immediate visibility into the data transmitted over your Web Sockets, which is crucial for real-time applications.
+- **Debugging**: Quickly identify and resolve issues related to event handling or data formatting.
+- **Verification**: Confirm that integrations and event-driven interactions are working correctly, ensuring that your application responds appropriately to real-time data.
+
+By utilizing the built-in socket monitoring tools provided in the Fleetbase console, developers can effectively manage and troubleshoot real-time communications within their applications. This feature enhances your ability to maintain robust and responsive logistics services.
+
 ## Best Practices
 
 -   **Error Handling:** Implement robust error handling, especially for connection issues and failed subscriptions.
