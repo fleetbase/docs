@@ -64,3 +64,5 @@ If you need to do backend development, packages must be linked as well via `comp
 ```
 
 Fleetbase packages contain both the frontend and server side code. For a Fleetbase extensions the frontend code will be located in the `/addon` directory while the server side code will be located in the `/server` directory. You can learn more about developing your own extension or contributing to an existing extension in the developers section.
+
+#### Cant find what you are looking for? [Raise a request](https://github.com/fleetbase/docs/issues) or join our [Community](https://discord.gg/HnTqQ6zAVn) ✌️ 

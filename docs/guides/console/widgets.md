@@ -19,3 +19,5 @@ Click on the ... dots on the right top corner, and then click 'Add Widgets'.
 Once you are here, you can select the widgets you need. If you are looking to create new widgets, you can do so from the back end, or reach out to the team. 
 
 ![Alt text](image-7.png)
+
+#### Cant find what you are looking for? [Raise a request](https://github.com/fleetbase/docs/issues) or join our [Community](https://discord.gg/HnTqQ6zAVn) ✌️ 

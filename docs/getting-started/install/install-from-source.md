@@ -489,3 +489,5 @@ sudo systemctl reload nginx
 Following these steps, you have successfully installed and deployed both the Fleetbase API and Console. The API server is powered by FrankenPHP for efficient handling of requests, and the console is set up with NGINX as the web server to deliver the user interface securely and efficiently.
 
 You should now be able to access Fleetbase on your servers port 4200.
+
+#### Cant find what you are looking for? [Raise a request](https://github.com/fleetbase/docs/issues) or join our [Community](https://discord.gg/HnTqQ6zAVn) ✌️ 

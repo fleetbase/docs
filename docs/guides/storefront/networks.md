@@ -62,3 +62,5 @@ View all of the customers that have been created from this orders in this networ
 
 ![Alt text](image-4.png)
 
+#### Cant find what you are looking for? [Raise a request](https://github.com/fleetbase/docs/issues) or join our [Community](https://discord.gg/HnTqQ6zAVn) ✌️ 
+

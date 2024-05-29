@@ -91,3 +91,5 @@ Define service areas and zones within Fleetbase to optimize your routes and stre
 ‍Complete proof of delivery (POD) for your orders to finalize the transaction and ensure customer satisfaction. Capture essential information such as signatures and timestamps to confirm successful deliveries.
 
 ![Alt text](image-62.png)
+
+#### Cant find what you are looking for? [Raise a request](https://github.com/fleetbase/docs/issues) or join our [Community](https://discord.gg/HnTqQ6zAVn) ✌️ 

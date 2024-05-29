@@ -215,3 +215,5 @@ $order = $fleetbase->orders->create([
 ## Conclusion
 
 This guide provides you with the foundational knowledge required to effectively use the Fleetbase API for developing logistics solutions. By adhering to RESTful conventions and using the Fleetbase SDK, you can enhance your applications and seamlessly integrate sophisticated logistics management functionalities.
+
+#### Cant find what you are looking for? [Raise a request](https://github.com/fleetbase/docs/issues) or join our [Community](https://discord.gg/HnTqQ6zAVn) ✌️ 

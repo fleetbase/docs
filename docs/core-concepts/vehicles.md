@@ -17,3 +17,5 @@ Vehicles are core resources in Fleetbase that describe the transport assets used
 
 - **Logistical Operations**: Essential for carrying out physical movements and deliveries in the order fulfillment process.
 - **Maintenance Tracking**: Can be used to track maintenance schedules, operational availability, and performance.
+
+#### Cant find what you are looking for? [Raise a request](https://github.com/fleetbase/docs/issues) or join our [Community](https://discord.gg/HnTqQ6zAVn) ✌️ 

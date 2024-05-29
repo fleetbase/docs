@@ -30,3 +30,5 @@ Once you have navigated to the Service Area section, you can create a new Servic
 8. **Restrict Service**  - Restrict this service to an order type, you can learn more about this in the Order Configuration. 
 
 ![Alt text](image-15.png)
+
+#### Cant find what you are looking for? [Raise a request](https://github.com/fleetbase/docs/issues) or join our [Community](https://discord.gg/HnTqQ6zAVn) ✌️ 

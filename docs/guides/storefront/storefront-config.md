@@ -64,4 +64,6 @@ Add your own Notification channel for example from Apple Push Notifications.
 
 ![Alt text](image-12.png)
 
+#### Cant find what you are looking for? [Raise a request](https://github.com/fleetbase/docs/issues) or join our [Community](https://discord.gg/HnTqQ6zAVn) ✌️ 
+
 

@@ -180,3 +180,5 @@ By utilizing the built-in socket monitoring tools provided in the Fleetbase cons
 ## Conclusion
 
 By integrating Fleetbase's real-time capabilities using SocketCluster, you can significantly enhance the responsiveness and efficiency of your logistics operations. This guide provides the foundational knowledge needed to start developing with Fleetbase sockets, enabling dynamic, real-time interactions across your logistics platforms.
+
+#### Cant find what you are looking for? [Raise a request](https://github.com/fleetbase/docs/issues) or join our [Community](https://discord.gg/HnTqQ6zAVn) ✌️ 

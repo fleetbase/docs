@@ -41,3 +41,5 @@ Fleetbase stands out in the logistics software landscape due to its exceptional 
 - **Robust Security**: Advanced security protocols to protect data integrity and privacy, ensuring that your business and customer information is secure.
 
 Fleetbase is not just a platform; it's a comprehensive solution engineered to transform the logistics and supply chain operations of any business, paving the way for a more efficient and reliable future in the industry.
+
+#### Cant find what you are looking for? [Raise a request](https://github.com/fleetbase/docs/issues) or join our [Community](https://discord.gg/HnTqQ6zAVn) ✌️ 

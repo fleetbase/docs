@@ -82,4 +82,6 @@ Navigate to the 'Issues' section to learn more.
 
 ### Navigator App
 
+#### Cant find what you are looking for? [Raise a request](https://github.com/fleetbase/docs/issues) or join our [Community](https://discord.gg/HnTqQ6zAVn) ✌️ 
+
 

@@ -16,3 +16,5 @@ Transactions are a core resource in Fleetbase that handle financial data related
 
 - **Comprehensive Tracking**: Transactions record detailed financial interactions, ensuring accurate accounting and financial management.
 - **Integration**: Seamlessly integrates with orders to automatically generate financial records upon order processing.
+
+#### Cant find what you are looking for? [Raise a request](https://github.com/fleetbase/docs/issues) or join our [Community](https://discord.gg/HnTqQ6zAVn) ✌️ 

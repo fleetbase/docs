@@ -63,3 +63,5 @@ Additionally you may want to use your own OSRM routing engine, or OSRM compatibl
 After completing the installation and configuration, you should verify that all services are running correctly and the application is responsive. Explore the Fleetbase documentation for advanced configurations, features, and how to start adding custom extensions.
 
 Congratulations on setting up Fleetbase! Start exploring the capabilities of your new logistics and supply chain operating system.
+
+#### Cant find what you are looking for? [Raise a request](https://github.com/fleetbase/docs/issues) or join our [Community](https://discord.gg/HnTqQ6zAVn) ✌️ 

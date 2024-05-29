@@ -26,3 +26,5 @@ You can create a new place by clicking on the button on the top of the panel.
 Export places by selecting the places and then clicking the 'Export' button. 
 
 ![Alt text](image-45.png)
+
+#### Cant find what you are looking for? [Raise a request](https://github.com/fleetbase/docs/issues) or join our [Community](https://discord.gg/HnTqQ6zAVn) ✌️ 

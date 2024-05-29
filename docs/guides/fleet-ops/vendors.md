@@ -35,3 +35,5 @@ You can create a new vendor by clicking on the button on the top of the panel.
 Export vendors by selecting the vendors and then clicking the 'Export' button. 
 
 ![Alt text](image-38.png)
+
+#### Cant find what you are looking for? [Raise a request](https://github.com/fleetbase/docs/issues) or join our [Community](https://discord.gg/HnTqQ6zAVn) ✌️ 

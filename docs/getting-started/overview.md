@@ -42,3 +42,5 @@ Fleetbase is not just a platform; it's a solution designed with the future of lo
 ---
 
 This overview serves as your gateway to understanding and utilizing Fleetbase. Each topic mentioned here is discussed in further detail in dedicated pages within this documentation, designed to help you successfully deploy, maintain, and leverage Fleetbase in your organization.
+
+#### Cant find what you are looking for? [Raise a request](https://github.com/fleetbase/docs/issues) or join our [Community](https://discord.gg/HnTqQ6zAVn) ✌️ 

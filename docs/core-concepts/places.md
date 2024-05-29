@@ -18,3 +18,5 @@ Places are a foundational resource in Fleetbase, defining physical locations wit
 
 - **Contacts and Vendors**: Places can be linked to contacts or vendors, enhancing the utility of location data across various modules.
 - **Module Integration**: Used by the inventory module to define warehouses and by the storefront module for store locations.
+
+#### Cant find what you are looking for? [Raise a request](https://github.com/fleetbase/docs/issues) or join our [Community](https://discord.gg/HnTqQ6zAVn) ✌️ 

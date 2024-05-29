@@ -35,3 +35,5 @@ Once you have created the Fleet, click the three dots and click 'View Details'. 
 Export vehicles by selecting the drivers and then clicking the 'Export' button. 
 
 ![Alt text](image-34.png)
+
+#### Cant find what you are looking for? [Raise a request](https://github.com/fleetbase/docs/issues) or join our [Community](https://discord.gg/HnTqQ6zAVn) ✌️ 

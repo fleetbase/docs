@@ -31,3 +31,5 @@ The Developers console allows you to have an overview of your activity, and crea
 
 ![Alt text](image-5.png)
 
+#### Cant find what you are looking for? [Raise a request](https://github.com/fleetbase/docs/issues) or join our [Community](https://discord.gg/HnTqQ6zAVn) ✌️ 
+

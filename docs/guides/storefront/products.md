@@ -41,3 +41,5 @@ Add products and services to be made available on your Storefront app by clickin
 **Availability** - Set which times this product is available.
 **Images** - Add images for this product.
 **Youtube** - Add You tube links for this product.
+
+#### Cant find what you are looking for? [Raise a request](https://github.com/fleetbase/docs/issues) or join our [Community](https://discord.gg/HnTqQ6zAVn) ✌️ 

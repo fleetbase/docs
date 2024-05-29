@@ -21,3 +21,5 @@ Add your existing users to groups to assign them to certain roles and policies.
 
 You can create specific roles which limit certain actions to Fleetbase features. Once you client New you can select which features are will be available for users or groups assigned to this role.
 
+#### Cant find what you are looking for? [Raise a request](https://github.com/fleetbase/docs/issues) or join our [Community](https://discord.gg/HnTqQ6zAVn) ✌️ 
+

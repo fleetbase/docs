@@ -77,3 +77,5 @@ Fleetbase dynamically generates service quotes based on the specifics of the ord
 - **Created**: Marks the initiation of a new order.
 - **Dispatched**: Indicates that the order has been sent out for delivery.
 - **Completed**: Confirms the completion of the order and fulfillment of all conditions.
+
+#### Cant find what you are looking for? [Raise a request](https://github.com/fleetbase/docs/issues) or join our [Community](https://discord.gg/HnTqQ6zAVn) ✌️ 

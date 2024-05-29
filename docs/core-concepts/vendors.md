@@ -16,3 +16,5 @@ Vendors represent business entities that an organization interacts with, ranging
 
 - **Business Relationships**: Defines and manages relationships with various business entities essential for operational success.
 - **Order Management**: Vendors can be integrated into the order management process, providing services or goods necessary for order fulfillment.
+
+#### Cant find what you are looking for? [Raise a request](https://github.com/fleetbase/docs/issues) or join our [Community](https://discord.gg/HnTqQ6zAVn) ✌️ 

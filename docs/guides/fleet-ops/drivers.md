@@ -26,4 +26,6 @@ You can create new orders by clicking on the button on the top of the panel.
 
 Export drivers by selecting the drivers and then clicking the 'Export' button. 
 
-![Alt text](image-30.png)
+![Alt text](image-30.png)'
+
+#### Cant find what you are looking for? [Raise a request](https://github.com/fleetbase/docs/issues) or join our [Community](https://discord.gg/HnTqQ6zAVn) ✌️ 

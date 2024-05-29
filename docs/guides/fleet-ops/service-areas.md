@@ -30,3 +30,5 @@ Below are the steps needed to create Service Areas & Zones.
 Zones are geofenced areas within Service Areas. Once the service are has been created, you can Right Click into the service area, and select 'Create Zone'. 
 
 ![Alt text](image-18.png)
+
+#### Cant find what you are looking for? [Raise a request](https://github.com/fleetbase/docs/issues) or join our [Community](https://discord.gg/HnTqQ6zAVn) ✌️ 

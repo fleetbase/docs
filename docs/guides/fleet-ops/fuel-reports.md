@@ -31,3 +31,5 @@ You can create a fuel reports by clicking on the button on the top of the panel.
 Export fuel reports by selecting the fuel reports and then clicking the 'Export' button. 
 
 ![Alt text](image-48.png)
+
+#### Cant find what you are looking for? [Raise a request](https://github.com/fleetbase/docs/issues) or join our [Community](https://discord.gg/HnTqQ6zAVn) ✌️ 

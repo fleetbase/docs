@@ -42,3 +42,5 @@ The Fleetbase API serves as the backbone of the Fleetbase platform, handling all
 - *Webhooks:* Provides robust support for webhooks, allowing external systems to receive real-time notifications about events within the Fleetbase platform, enhancing integration capabilities.
 - *Real-Time:* Manages real-time data flow throughout the platform, ensuring that all components are synchronized and updates are delivered promptly.
 - *Task Management:* Effectively handles asynchronous tasks and queuing, leveraging advanced job processing capabilities to maintain high performance and responsiveness across operations.
+
+#### Cant find what you are looking for? [Raise a request](https://github.com/fleetbase/docs/issues) or join our [Community](https://discord.gg/HnTqQ6zAVn) ✌️ 

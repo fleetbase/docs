@@ -81,3 +81,4 @@ docker-compose down && docker-compose up -d
 
 Then, test by accessing the Fleetbase Console and verifying that CORS errors no longer occur when it interacts with the backend.
 
+#### Cant find what you are looking for? [Raise a request](https://github.com/fleetbase/docs/issues) or join our [Community](https://discord.gg/HnTqQ6zAVn) ✌️ 

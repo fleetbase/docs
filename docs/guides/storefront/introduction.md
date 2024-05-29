@@ -17,3 +17,5 @@ This Storefront app is built with React Native to provide react native developer
 The dashboard is where you can manage all of your orders, customers, stores and current earnings.
 
 ![Alt text](image-8.png)
+
+#### Cant find what you are looking for? [Raise a request](https://github.com/fleetbase/docs/issues) or join our [Community](https://discord.gg/HnTqQ6zAVn) ✌️ 

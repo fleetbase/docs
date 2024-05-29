@@ -60,3 +60,5 @@ Each section of our developer documentation is structured to provide comprehensi
 
 ## Conclusion
 Dive into the specific sections that match your development needs, and begin crafting applications and solutions that leverage the full power of Fleetbase. We are excited to see what you will build and how you will use these tools to transform the logistics landscape.
+
+#### Cant find what you are looking for? [Raise a request](https://github.com/fleetbase/docs/issues) or join our [Community](https://discord.gg/HnTqQ6zAVn) ✌️ 

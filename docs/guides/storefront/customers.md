@@ -17,3 +17,5 @@ You can create new customers 2 ways:
 2. You can also create Customers manually by clicking ‘New’ on the top right
 
 ![Alt text](image-6.png)
+
+#### Cant find what you are looking for? [Raise a request](https://github.com/fleetbase/docs/issues) or join our [Community](https://discord.gg/HnTqQ6zAVn) ✌️ 

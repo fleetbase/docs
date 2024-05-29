@@ -24,3 +24,5 @@ You can create new orders by clicking on the button on the top of the panel.
 Export vehicles by selecting the drivers and then clicking the 'Export' button. 
 
 ![Alt text](image-32.png)
+
+#### Cant find what you are looking for? [Raise a request](https://github.com/fleetbase/docs/issues) or join our [Community](https://discord.gg/HnTqQ6zAVn) ✌️ 

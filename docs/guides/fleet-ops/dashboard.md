@@ -63,3 +63,5 @@ Users can view and hide all of the columns they want to see in the table view. S
 Once you select orders from the Table View, you can commit bulk actions on these orders. Simply navigate to the 'Bulk Action' button on the top right. 
 
 ![Alt text](image-12.png)
+
+#### Cant find what you are looking for? [Raise a request](https://github.com/fleetbase/docs/issues) or join our [Community](https://discord.gg/HnTqQ6zAVn) ✌️ 

@@ -80,3 +80,5 @@ Again, once you create an entitiy type, once you pull this specific order config
 4. **Measurements** - Set your custom measurements for the entity. 
 
 Once you save, your custom order config will be completed, please see the 'Order' section for steps on how to create a new order.
+
+#### Cant find what you are looking for? [Raise a request](https://github.com/fleetbase/docs/issues) or join our [Community](https://discord.gg/HnTqQ6zAVn) ✌️ 

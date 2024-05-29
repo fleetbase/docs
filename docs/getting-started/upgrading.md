@@ -85,3 +85,5 @@ After completing the upgrade, verify that everything is running smoothly:
 ## Conclusion
 
 This guide provides a structured approach to upgrading Fleetbase, whether you are using Docker or a traditional source installation. By following these steps, you can ensure that your Fleetbase deployment takes advantage of the latest features and improvements while maintaining stability and security.
+
+#### Cant find what you are looking for? [Raise a request](https://github.com/fleetbase/docs/issues) or join our [Community](https://discord.gg/HnTqQ6zAVn) ✌️ 
