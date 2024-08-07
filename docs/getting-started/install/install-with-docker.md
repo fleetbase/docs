@@ -73,7 +73,7 @@ REDIS_URL=redis://localhost:6379
 - `TWILIO_TOKEN`: Authentication token for Twilio.
 - `TWILIO_FROM`: The phone number from which Twilio SMS are sent.
 - `SENTRY_LARAVEL_DSN`: The DSN for Sentry, used for error tracking.
-- `OSRM_HOST`: The OSRM server to use, defaults to https://bundle.routing.fleetbase.io
+- `OSRM_HOST`: The OSRM server to use, defaults to https://router.project-osrm.org
 
 ### 3. Build and Start Services
 

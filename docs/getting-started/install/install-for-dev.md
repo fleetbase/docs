@@ -64,3 +64,35 @@ If you need to do backend development, packages must be linked as well via `comp
 ```
 
 Fleetbase packages contain both the frontend and server side code. For a Fleetbase extensions the frontend code will be located in the `/addon` directory while the server side code will be located in the `/server` directory. You can learn more about developing your own extension or contributing to an existing extension in the developers section.
+
+### Develop in Docker
+
+If you'd like to develop in the Docker environment you need to setup volume mounts so that both the console and the API are able to access linked packages. Additionally you will also need to set the environment to `development` so that the console can reload on detected changes.
+
+The following setup should allow you to setup a development environment in Docker.
+
+```yml
+services:
+    console:
+        build:
+            context: .
+            dockerfile: console/Dockerfile.server-build
+            args:
+                ENVIRONMENT: development
+        ports:
+            - "4200:4200"
+        volumes:
+            - ./console:/app/console
+            - ./packages:/app/packages
+
+    application:
+        build:
+            context: .
+            dockerfile: docker/Dockerfile
+            target: app-dev
+            args:
+                ENVIRONMENT: development
+        volumes:
+            - ./api:/fleetbase/api
+            - ./packages:/fleetbase/packages
+```

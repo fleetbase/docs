@@ -295,14 +295,14 @@ In the .env file, add the following environment variables. These variables are e
 - `TWILIO_TOKEN`: Authentication token for Twilio.
 - `TWILIO_FROM`: The phone number from which Twilio SMS are sent.
 - `SENTRY_LARAVEL_DSN`: The DSN for Sentry, used for error tracking.
-- `OSRM_HOST`: The OSRM server to use, defaults to https://bundle.routing.fleetbase.io
+- `OSRM_HOST`: The OSRM server to use, defaults to https://router.project-osrm.org
 
 #### Example Configuration
 Below is an example configuration for a development environment:
 ```bash
 APP_URL=http://localhost:8000
 CONSOLE_HOST=http://localhost:4200
-OSRM_HOST=https://bundle.routing.fleetbase.io
+OSRM_HOST=https://router.project-osrm.org
 DATABASE_URL=mysql://root:password@localhost/fleetbase
 STOREFRONT_DB_CONNECTION=storefront
 QUEUE_CONNECTION=redis
@@ -369,7 +369,7 @@ SOCKETCLUSTER_PATH=/socketcluster/
 SOCKETCLUSTER_HOST=localhost
 SOCKETCLUSTER_SECURE=true
 SOCKETCLUSTER_PORT=38000
-OSRM_HOST=https://bundle.routing.fleetbase.io
+OSRM_HOST=https://router.project-osrm.org
 OSRM_SERVERS=https://canada.routing.fleetbase.io,https://us.routing.fleetbase.io
 ```
 

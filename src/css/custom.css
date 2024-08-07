@@ -6,25 +6,86 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #186995;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+    --ifm-color-primary: #186995;
+    --ifm-color-primary-dark: #29784c;
+    --ifm-color-primary-darker: #277148;
+    --ifm-color-primary-darkest: #205d3b;
+    --ifm-color-primary-light: #33925d;
+    --ifm-color-primary-lighter: #359962;
+    --ifm-color-primary-lightest: #3cad6e;
+    --ifm-code-font-size: 95%;
+    --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #3383E3;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+    --ifm-color-primary: #3383e3;
+    --ifm-color-primary-dark: #21af90;
+    --ifm-color-primary-darker: #1fa588;
+    --ifm-color-primary-darkest: #1a8870;
+    --ifm-color-primary-light: #29d5b0;
+    --ifm-color-primary-lighter: #32d8b4;
+    --ifm-color-primary-lightest: #4fddbf;
+    --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+table.docs-table {
+    display: table;
+    table-layout: fixed;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 0.5rem;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+}
+
+table.docs-table > thead > tr {
+    border-bottom: 1px solid var(--ifm-table-border-color);
+}
+
+table.docs-table > tbody > tr:first-child {
+    border-top: 0px;
+}
+
+table.docs-table > thead > tr:first-child {
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+
+table.docs-table > thead > tr:first-child > th:first-child {
+    border-top-left-radius: 0.5rem;
+}
+
+table.docs-table > thead > tr:first-child > th:last-child {
+    border-top-right-radius: 0.5rem;
+}
+
+table.docs-table > tbody > tr:last-child {
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+
+table.docs-table > tbody > tr:last-child > td:first-child {
+    border-bottom-left-radius: 0.5rem;
+}
+
+table.docs-table > tbody > tr:last-child > td:last-child {
+    border-bottom-right-radius: 0.5rem;
+}
+
+table.docs-table td,
+table.docs-table th {
+    font-size: 1rem;
+    padding: 0.25rem 0.5rem;
+    border: 1px solid var(--ifm-table-border-color);
+}
+
+table.docs-table th,
+table.docs-table tbody tr:not(:last-child) > td {
+    border-bottom: 0px;
+}
+
+.markdown table.docs-table pre * {
+    font-size: 0.7rem !important;
 }

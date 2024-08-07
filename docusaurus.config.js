@@ -195,7 +195,7 @@ const config = {
                 copyright: `Copyright © ${new Date().getFullYear()} Fleetbase`,
             },
             prism: {
-                additionalLanguages: ['bash', 'diff', 'json', 'php', 'javascript'],
+                additionalLanguages: ['bash', 'diff', 'json', 'php', 'javascript', 'handlebars'],
                 theme: lightTheme,
                 darkTheme: darkTheme,
             },

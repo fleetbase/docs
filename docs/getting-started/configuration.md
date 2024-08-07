@@ -31,7 +31,7 @@ DATABASE_URL=mysql://user:password@localhost:3306/fleetbase
 REDIS_URL=redis://localhost:6379
 ```
 
-### Environment Variables for Fleetbase
+### Env Variables for Fleetbase API
 
 - `APP_URL`: The URL where your Fleetbase API is accessible. For development, you might use localhost.
 - `CONSOLE_HOST`: The URL for the Fleetbase console.
@@ -58,7 +58,19 @@ REDIS_URL=redis://localhost:6379
 - `TWILIO_TOKEN`: Authentication token for Twilio.
 - `TWILIO_FROM`: The phone number from which Twilio SMS are sent.
 - `SENTRY_LARAVEL_DSN`: The DSN for Sentry, used for error tracking.
-- `OSRM_HOST`: The OSRM server to use, defaults to https://bundle.routing.fleetbase.io
+- `OSRM_HOST`: The OSRM server to use, defaults to https://router.project-osrm.org
+
+### Env Variables for Fleetbase Console
+
+The console has a different set of environment variables, mainly used to setup connection to API.
+
+- `API_HOST`: The URL where your Fleetbase API is accessible. 
+- `API_NAMESPACE`: The namespace which should be used for the Fleetbase API, typically will remain `int/v1`.
+- `SOCKETCLUSTER_PATH`: The path to the socketcluster host instance. Defaults to `/socketcluster/`.
+- `SOCKETCLUSTER_HOST`: The host of the socketclust instance. 
+- `SOCKETCLUSTER_SECURE`: Whether or not to use a secure socketcluster connection. (`wss://` or `ws://`).
+- `SOCKETCLUSTER_PORT`: The port of the socketclust instance. Defaults to `38000`.
+- `OSRM_HOST`: The OSRM server to use, defaults to https://router.project-osrm.org
 
 ## Setting Up SSL
 

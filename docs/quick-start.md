@@ -56,7 +56,7 @@ Modify the environment settings in the `console/environments/*` directory:
 
 Additionally you may want to use your own OSRM routing engine, or OSRM compatible engine for routing and route optimization. You can easily do this by setting the `OSRM_HOST` environment variable on both the console and the API.
 
-- `OSRM_HOST`: Specifies the host for the OSRM compatible routing engine to use. (Defaults to https://bundle.routing.fleetbase.io)
+- `OSRM_HOST`: Specifies the host for the OSRM compatible routing engine to use. (Defaults to https://router.project-osrm.org)
 
 ### Next Steps
 
