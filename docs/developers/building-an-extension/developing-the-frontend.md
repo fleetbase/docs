@@ -442,15 +442,7 @@ export default class VesselDetailsFormComponent extends Component {
     }
 
     @action updateVesselDetail(event, key) {
-        const metaField = this.order.meta.find((_metaField) => metaField.key === key);
-        if (metaField) {
-            metaField.value = event.target.value;
-        } else {
-            this.order.meta.pushObject({
-                key,
-                value: event.target.value
-            });
-        }
+        this.order.setMeta(key, event.target.value);
     }
 }
 ```
@@ -475,16 +467,6 @@ This component now has the Fleet Ops `OrderModel` instance as `this.order` avail
 ```
 
 Now when a haulage order type is selected the Fleet Ops order form will render you component allowing the user to key in vessel details to the order `meta` data which will be serialized and available as `get(order, 'vessel-name')` or on the backend as `$order->getMeta('vessel-name');`.
-
-## Putting it Together
-
-This covers the basics for developing the frontend for a Fleetbase extension, now let's put it all together in an example where we render a table of records with pagination.
-
-### The Route
-
-### The Controller
-
-### The Template
 
 
 
