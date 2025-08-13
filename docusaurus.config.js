@@ -131,6 +131,10 @@ const config = {
                                 href: 'https://github.com/fleetbase/fleetbase',
                             },
                             {
+                                label: 'Deploy on AWS',
+                                href: 'https://console.fleetbase.io/aws-marketplace',
+                            },
+                            {
                                 label: 'Use Cases',
                                 href: 'https://github.com/fleetbase/fleetbase#-use-cases',
                             },
