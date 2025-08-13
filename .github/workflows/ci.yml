@@ -59,7 +59,7 @@ jobs:
         run: pnpm build
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1.0.8
+        uses: actions/upload-pages-artifact@v3
         with:
           name: github-pages
           path: ./build
@@ -76,6 +76,6 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4
       - name: Print the URL
         run: echo "Deployed to ${{ steps.deployment.outputs.page_url }}"
