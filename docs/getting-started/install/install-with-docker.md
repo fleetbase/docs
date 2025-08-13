@@ -79,7 +79,7 @@ REDIS_URL=redis://localhost:6379
 
 Use Docker Compose to build and start the services. The -d flag runs them in detached mode:
 ```bash
-docker-compose up --build -d
+docker compose up --build -d
 ```
 
 ### 4. Access the Application Container

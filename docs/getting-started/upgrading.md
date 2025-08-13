@@ -21,15 +21,14 @@ git pull origin main --no-rebase
 
 If you encounter merge conflicts after pulling the latest changes, you'll need to resolve these manually. Open the conflicting files and make the necessary changes to integrate new updates with your custom configurations.
 
-### Step 3: Rebuild Docker Containers
+### Step 3: Upgrade Container Images
 
-After resolving any conflicts and committing the changes, you need to rebuild your Docker containers to apply the updates:
+After resolving any conflicts and committing the changes, you need to pull the latest Docker containers:
 ```bash
-docker-compose down
-docker-compose up --build -d
+docker compose down && docker compose pull && docker compose up -d
 ```
 
-This will stop the current containers, rebuild them with the latest changes, and restart them in detached mode.
+This will stop the current containers, pull the container images with latest versions, and restart them in detached mode.
 
 ## Upgrading Fleetbase from Source
 

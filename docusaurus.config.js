@@ -38,7 +38,7 @@ const config = {
 
     presets: [
         [
-            'classic',
+            '@docusaurus/preset-classic',
             /** @type {import('@docusaurus/preset-classic').Options} */
             ({
                 docs: {
@@ -129,6 +129,10 @@ const config = {
                             {
                                 label: 'Open Source',
                                 href: 'https://github.com/fleetbase/fleetbase',
+                            },
+                            {
+                                label: 'Deploy on AWS',
+                                href: 'https://console.fleetbase.io/aws-marketplace',
                             },
                             {
                                 label: 'Use Cases',

@@ -17,7 +17,7 @@ git clone git@github.com:fleetbase/fleetbase.git && cd fleetbase
 git submodule update --init --recursive
 
 # 2. Start the services using docker-compose:
-docker-compose up -d
+docker compose up -d
 
 # 3. Enter the application container (could also be `fleetbase_application_1`):
 docker exec -ti fleetbase-application-1 bash
@@ -26,7 +26,7 @@ docker exec -ti fleetbase-application-1 bash
 sh deploy.sh
 
 # 5. For development stop the console container
-docker-compose down console
+docker compose down console
 
 # 6. Run the development server for the console
 cd console && pnpm install && pnpm start

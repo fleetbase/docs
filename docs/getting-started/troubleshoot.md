@@ -75,7 +75,7 @@ After making these changes, restart your services:
 
 - If using Docker, run:
 ```bash
-docker-compose down && docker-compose up -d
+docker compose down && docker compose up -d
 ```
 - For non-Docker setups, simply restart your server services.
 

@@ -19,7 +19,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [18.x]  # Build on Node.js 18
+        node-version: [20.x]  # Build on Node.js 20
 
     env:
       GITHUB_PAGES_ENV: true
@@ -34,9 +34,9 @@ jobs:
           node-version: ${{ matrix.node-version }}
   
       - name: Setup pnpm
-        uses: pnpm/action-setup@v2.0.1
+        uses: pnpm/action-setup@v4.1.0
         with:
-          version: latest
+          version: ^10.2
 
       - name: Get pnpm Store Directory
         id: pnpm-cache
@@ -59,7 +59,7 @@ jobs:
         run: pnpm build
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1.0.8
+        uses: actions/upload-pages-artifact@v3
         with:
           name: github-pages
           path: ./build
@@ -76,6 +76,6 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4
       - name: Print the URL
         run: echo "Deployed to ${{ steps.deployment.outputs.page_url }}"

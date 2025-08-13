@@ -15,18 +15,10 @@ Before you begin, ensure you have Docker installed on your machine. This guide u
 ## Installation Steps
 
 ```bash
-# 1. Clone the repository and enter directory:
-git clone git@github.com:fleetbase/fleetbase.git && cd fleetbase
-
-# 2. Start the services using docker-compose:
-docker-compose up -d
-
-# 3. Enter the application container (could also be `fleetbase_application_1`):
-docker exec -ti fleetbase-application-1 bash
-
-# 4. Run the Deploy script:
-sh deploy.sh
+git clone git@github.com:fleetbase/fleetbase.git  
+cd fleetbase && ./scripts/docker-install.sh
 ```
+
 ## Configuration
 
 There is various environment variables and services which are required to successfuly run Fleetbase depending on your setup. For a local/development setup the default environment variables should be enough, but if you're running it on AWS, DigitalOcean, Azure, or some other cloud provider you may need to tweak the configuration.
@@ -45,7 +37,7 @@ Setting up mail is also very important for Fleetbase to send critical emails and
 
 ### Fleetbase Console Configuration
 
-Modify the environment settings in the `console/environments/*` directory:
+Modify the environment settings in the `console/environments/*` directory or update in `console/fleetbase.config.json`:
 
 - `API_HOST`: URL where the Fleetbase API is accessible. (Defaults to http://localhost:8000)
 - `SOCKETCLUSTER_HOST`: Specifices the host of your SocketCluster service.
