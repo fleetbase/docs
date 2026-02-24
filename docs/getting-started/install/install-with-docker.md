@@ -65,7 +65,7 @@ REDIS_URL=redis://localhost:6379
 - `MODEL_CACHE_ENABLED`: Toggle to enable/disable model caching.
 - `RESPONSE_CACHE_ENABLED`: Toggle to enable/disable response caching.
 - `RESPONSE_CACHE_DRIVER`: Specifies the caching driver for responses.
-- `MAIL_MAILER`: Defines the mail backend, for example: Sendgrid, SES (Amazon Simple Email Service), Postmark.
+- `MAIL_MAILER`: Defines the mail backend, for example: Sendgrid, Mailgun, Postmark, or SMTP.
 - `IPINFO_API_KEY`: API key for IPInfo service, if used.
 - `GOOGLE_MAPS_API_KEY`: API key for Google Maps services.
 - `GOOGLE_MAPS_LOCALE`: Locale setting for Google Maps.

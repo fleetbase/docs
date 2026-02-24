@@ -6,52 +6,124 @@ slug: /quick-start
 
 # Quick Start
 
-Get started with the open-source version of Fleetbase in just 10 to 15 minutes. This guide is intended for developers with basic familiarity with command line tools and development processes.
+Get started with Fleetbase in just 5 minutes using our CLI-based installer. This guide is perfect for developers and operations teams who want to get up and running quickly.
 
 ## Prerequisites
 
-Before you begin, ensure you have Docker installed on your machine. This guide uses Docker to simplify the setup of Fleetbase.
+Before you begin, ensure you have:
 
-## Installation Steps
+- **Node.js** 14+ and npm installed
+- **Docker** and Docker Compose installed
+- Basic familiarity with command line tools
+
+## Installation
+
+### Step 1: Install Fleetbase CLI
 
 ```bash
-git clone git@github.com:fleetbase/fleetbase.git  
-cd fleetbase && ./scripts/docker-install.sh
+npm install -g @fleetbase/cli
 ```
 
-## Configuration
+### Step 2: Run the Installer
 
-There is various environment variables and services which are required to successfuly run Fleetbase depending on your setup. For a local/development setup the default environment variables should be enough, but if you're running it on AWS, DigitalOcean, Azure, or some other cloud provider you may need to tweak the configuration.
+```bash
+flb install-fleetbase
+```
 
-### Fleetbase API Configuration
+The interactive installer will prompt you for:
+- **Host**: Use `localhost` for local development or `0.0.0.0` for external access
+- **Environment**: Choose `development` or `production`
+- **Directory**: Installation location (default: current directory)
 
-- `CONSOLE_HOST`: Specifies the host and port for the Fleetbase console.
-- `SOCKETCLUSTER_HOST`: Specifices the host of your SocketCluster service.
-- `SOCKETCLUSTER_PORT`: Specifices the port of your SocketCluster service. (Defaults to 38000)
-- `SOCKETCLUSTER_SECURE`: Specifices if the SocketCluster service should use WSS or WS to connect. (Defaults to `false`)
-- `GOOGLE_MAPS_API_KEY`: Required if you plan to use Google API for geocoding. (More providers coming later)
-- `IPINFO_API_KEY`: Used to retrieve user information based on their IP address.
-- `TWILIO_SID`, `TWILIO_TOKEN`, `TWILIO_FROM`: Required for Fleetbase to send SMS via Twilio. (More providers coming later)
+### Step 3: Access the Console
 
-Setting up mail is also very important for Fleetbase to send critical emails and verifications. Since Fleetbase is built using Laravel you can use the <a href="https://laravel.com/docs/11.x/mail#configuration" target="laravel">Laravel mail guide</a> for setting up and configuring emails in Fleetbase.
+Once installation completes (typically 3-5 minutes), open your browser to:
 
-### Fleetbase Console Configuration
+```
+http://localhost:4200
+```
 
-Modify the environment settings in the `console/environments/*` directory or update in `console/fleetbase.config.json`:
+Complete the onboarding wizard to create your admin account and set up your organization.
 
-- `API_HOST`: URL where the Fleetbase API is accessible. (Defaults to http://localhost:8000)
-- `SOCKETCLUSTER_HOST`: Specifices the host of your SocketCluster service.
-- `SOCKETCLUSTER_PORT`: Specifices the port of your SocketCluster service. (Defaults to 38000)
-- `SOCKETCLUSTER_SECURE`: Specifices if the SocketCluster service should use WSS or WS to connect. (Defaults to `false`)
+## What's Next?
 
-### OSRM Configuration
+### Configure External Services
 
-Additionally you may want to use your own OSRM routing engine, or OSRM compatible engine for routing and route optimization. You can easily do this by setting the `OSRM_HOST` environment variable on both the console and the API.
+For production use, configure these services in your environment:
 
-- `OSRM_HOST`: Specifies the host for the OSRM compatible routing engine to use. (Defaults to https://router.project-osrm.org)
+- **Email**: SendGrid, Mailgun, Postmark, or SMTP
+- **SMS**: Twilio for driver notifications
+- **Maps**: Google Maps API for geocoding and routing
+- **Monitoring**: Sentry for error tracking
 
-### Next Steps
+See the [Configuration Guide](/getting-started/configuration) for detailed instructions.
 
-After completing the installation and configuration, you should verify that all services are running correctly and the application is responsive. Explore the Fleetbase documentation for advanced configurations, features, and how to start adding custom extensions.
+### Register Developer Account (Optional)
 
-Congratulations on setting up Fleetbase! Start exploring the capabilities of your new logistics and supply chain operating system.
+If you plan to develop or publish extensions:
+
+```bash
+# Register your developer account
+flb register --host localhost:8000
+
+# Verify your email
+flb verify -e your@email.com -c 123456 --host localhost:8000
+
+# Set your registry token
+flb set-auth flb_your_token --registry http://localhost:8000
+```
+
+Learn more in the [CLI Documentation](/extensions/cli).
+
+### Explore Extensions
+
+Install extensions to add functionality:
+
+```bash
+# Set up authentication first
+flb set-auth your_token --registry http://localhost:8000
+
+# Install an extension
+flb install @fleetbase/storefront-api --path /path/to/fleetbase
+```
+
+Browse available extensions in the [Extension Marketplace](https://console.fleetbase.io/extensions).
+
+## Alternative Installation Methods
+
+If you prefer more control over the installation process:
+
+- [**Manual Docker Installation**](/getting-started/install/with-docker) - For advanced users
+- [**Install from Source**](/getting-started/install/from-source) - For developers and contributors
+
+## Troubleshooting
+
+### Ports Already in Use
+
+If ports 8000, 4200, 3306, or 6379 are already in use, stop the conflicting services or modify the Docker Compose configuration.
+
+### Docker Not Running
+
+Ensure Docker is running before installation:
+
+```bash
+docker --version
+docker compose version
+```
+
+### Need Help?
+
+- [Troubleshooting Guide](/getting-started/troubleshoot)
+- [Community Discord](https://discord.gg/fleetbase)
+- [GitHub Issues](https://github.com/fleetbase/fleetbase/issues)
+
+## Next Steps
+
+After completing the quick start:
+
+1. [**Architecture Overview**](/getting-started/architecture) - Understand how Fleetbase works
+2. [**Configuration Guide**](/getting-started/configuration) - Configure external services
+3. [**Fleet Ops Guide**](/guides/fleet-ops/introduction) - Start managing your fleet
+4. [**API Documentation**](/developers/api) - Integrate with your applications
+
+Congratulations on setting up Fleetbase! You're ready to start managing your logistics operations.

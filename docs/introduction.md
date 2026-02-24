@@ -42,48 +42,20 @@ Fleetbase stands out in the logistics software landscape due to its exceptional 
 
 Fleetbase is not just a platform; it's a comprehensive solution engineered to transform the logistics and supply chain operations of any business, paving the way for a more efficient and reliable future in the industry.
 
-## 🚀 Deploy to AWS
+## 🚀 Quick Installation
 
-Deploy your complete Fleetbase logistics platform on AWS with enterprise-grade security, scalability, and reliability. No DevOps expertise required!
+Get Fleetbase up and running in minutes with our CLI-based Docker installation:
 
-[![Deploy to AWS](https://img.shields.io/badge/Deploy%20to%20AWS-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white)](https://console.fleetbase.io/aws-marketplace)
+```bash
+npm install -g @fleetbase/cli
+flb install-fleetbase
+```
 
-### ✨ What You Get
+The installation wizard will guide you through:
+- **Docker Setup**: Automatic container orchestration
+- **Environment Configuration**: Development or production mode
+- **Service Initialization**: MySQL, Redis, SocketCluster, and more
+- **Console Access**: Web-based management interface
 
-- **Complete AWS Infrastructure**: ECS Fargate, RDS MySQL, ElastiCache Redis, S3, CloudFront, and more  
-- **25-Minute Setup**: From zero to production-ready logistics platform  
-- **Enterprise Security**: VPC isolation, encrypted storage, secrets management  
-- **Auto-Scaling**: Handle traffic spikes with ECS Fargate auto-scaling  
-- **High Availability**: Multi-AZ deployment with 99.9% uptime SLA  
-- **Cost Optimized**: Pay-as-you-use with optimized resource allocation  
-
-### 💰 Pricing Options
-
-**AGPL v3 Community Edition**  
-- $2,500 one-time deployment fee  
-- Full access to modify and customize  
-- Community support via GitHub and Discord  
-- Perfect for startups and internal tools  
-
-**FCL Commercial License**  
-- $25,000 annual fee (includes deployment service)  
-- No copyleft obligations  
-- Priority support and SLA  
-- Commercial redistribution rights  
-- Includes Fleetbase Navigator app  
-
-### 🏗️ Infrastructure Included
-
-Your AWS deployment includes a complete, production-ready infrastructure stack:
-
-- **Compute**: ECS Fargate cluster with auto-scaling services  
-- **Database**: RDS MySQL 8.0 with automated backups and Multi-AZ support  
-- **Cache**: ElastiCache Redis for high-performance caching  
-- **Storage**: S3 object storage with CloudFront CDN for global distribution  
-- **Networking**: VPC with private subnets, NAT gateways, and security groups  
-- **Load Balancing**: Application Load Balancer with SSL certificates  
-- **Monitoring**: CloudWatch logs, container insights, and health monitoring  
-- **Messaging**: SQS message queues for background job processing  
-
-[**🚀 Deploy Now**](https://console.fleetbase.io/aws-marketplace) | [**📖 Learn More**](https://docs.fleetbase.io/category/deploying/aws)
+[**📖 Installation Guide**](/getting-started/install/with-cli) | [**🛠️ CLI Documentation**](/extensions/cli)
 

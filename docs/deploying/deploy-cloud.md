@@ -6,7 +6,7 @@ slug: /deploying/cloud
 
 # Deploy to Cloud
 
-Deploy Fleetbase on any cloud provider using Docker containers. This guide provides step-by-step instructions for deploying Fleetbase on popular cloud platforms including AWS, Google Cloud Platform, Microsoft Azure, DigitalOcean, and others.
+Deploy Fleetbase on any cloud provider using Docker containers. This guide provides step-by-step instructions for deploying Fleetbase on popular cloud platforms including DigitalOcean, Google Cloud Platform, Microsoft Azure, Linode, and others.
 
 ## Overview
 
@@ -35,30 +35,26 @@ Before starting the deployment, ensure you have:
 - **SSL Certificates**: For HTTPS (Let's Encrypt recommended)
 
 ### External Services (Optional)
-- **Email Service**: AWS SES, SendGrid, Mailgun, or SMTP server
+- **Email Service**: SendGrid, Mailgun, Postmark, or SMTP server
 - **SMS Service**: Twilio account for SMS notifications
 - **Maps Service**: Google Maps API key
 - **Monitoring**: CloudWatch, Datadog, or similar
 
 ## Step 1: Provision Cloud Infrastructure
 
-### AWS (Amazon Web Services)
+### DigitalOcean
 
-1. **Launch EC2 Instance**:
-   ```bash
-   # Create EC2 instance with Ubuntu 20.04 LTS
-   # Instance type: t3.medium or larger
-   # Security group: Allow ports 22, 80, 443, 4200, 8000
-   ```
+1. **Create Droplet**:
+   - Choose Ubuntu 20.04 LTS or later
+   - Select $20/month plan (2 vCPUs, 4GB RAM) or higher
+   - Add SSH key for secure access
+   - Enable monitoring and backups
 
-2. **Configure Security Groups**:
-   - SSH (22): Your IP address
-   - HTTP (80): 0.0.0.0/0
-   - HTTPS (443): 0.0.0.0/0
-   - Custom (4200): 0.0.0.0/0 (Console)
-   - Custom (8000): 0.0.0.0/0 (API)
+2. **Configure Firewall**:
+   - Create firewall rules for ports 22, 80, 443, 4200, 8000
+   - Restrict SSH access to your IP address
 
-3. **Attach Elastic IP** (recommended for production)
+3. **Assign Reserved IP** (recommended for production)
 
 ### Google Cloud Platform (GCP)
 

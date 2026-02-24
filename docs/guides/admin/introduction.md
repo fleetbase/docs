@@ -54,7 +54,7 @@ Create an upload the avatars that you want users to use in your Fleetbase instan
 
 ### Services
 
-Add in your API Keys for 3rd party services such as Google Maps, AWS, Twilio & Sentry in the Services section. 
+Add in your API Keys for 3rd party services such as Google Maps, Twilio, Sentry, and email providers in the Services section. 
 
 ![Alt text](image-7.png)
 

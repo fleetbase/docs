@@ -1,6 +1,6 @@
 ---
 title: Install for Development
-sidebar_position: 1
+sidebar_position: 3
 slug: /getting-started/install/for-development
 ---
 
