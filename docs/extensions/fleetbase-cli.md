@@ -496,6 +496,6 @@ If extension installation fails:
 ## Next Steps
 
 - [Installation Guide](/getting-started/install/with-cli) - Install Fleetbase with CLI
-- [Extension Development](/developers/building-an-extension/introduction) - Build your own extensions
+- [Extension Development](/developers/building-an-extension) - Build your own extensions
 - [Configuration Guide](/getting-started/configuration) - Configure Fleetbase
 - [API Documentation](/developers/api) - Integrate with Fleetbase API

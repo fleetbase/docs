@@ -192,7 +192,7 @@ rm -rf fleetbase
 
 - [Configuration Guide](/getting-started/configuration) - Configure external services
 - [CLI Documentation](/extensions/cli) - Learn about CLI commands
-- [Extension Development](/developers/building-an-extension/introduction) - Build your own extensions
+- [Extension Development](/developers/building-an-extension) - Build your own extensions
 - [API Documentation](/developers/api) - Integrate with the Fleetbase API
 
 ## Comparison with Other Installation Methods
