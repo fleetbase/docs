@@ -6,11 +6,32 @@ slug: /deploying/on-premise
 
 # Deploy on Premise
 
-Deploy Fleetbase on your own infrastructure with complete control over your data and environment. This guide covers both Docker-based and native installations for on-premise deployments.
+Deploy Fleetbase on your own infrastructure with complete control over your data and environment. This guide covers both CLI-based installation and manual Docker setup for on-premise deployments.
 
-## Overview
+## Recommended: CLI Installation
 
-On-premise deployment gives you full control over your Fleetbase installation, ensuring data sovereignty, compliance with internal policies, and customization capabilities. This guide covers:
+The easiest way to deploy Fleetbase on-premise is using the Fleetbase CLI:
+
+```bash
+npm install -g @fleetbase/cli
+flb install-fleetbase --host 0.0.0.0 --environment production
+```
+
+This method:
+- Automatically configures Docker containers
+- Sets up production-ready environment variables
+- Initializes all required services
+- Takes approximately 5 minutes
+
+For detailed instructions, see the [CLI Installation Guide](/getting-started/install/with-cli).
+
+## Advanced: Manual Docker Setup
+
+For users who need full control over the deployment process, follow the manual Docker setup below.
+
+### Overview
+
+Manual on-premise deployment gives you complete control over your Fleetbase installation, ensuring data sovereignty, compliance with internal policies, and customization capabilities. This guide covers:
 
 - **Docker Deployment**: Containerized setup for easy management
 - **Native Installation**: Direct installation on the host system
