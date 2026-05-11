@@ -5,6 +5,37 @@ const { themes } = require('prism-react-renderer');
 const lightTheme = themes.github;
 const darkTheme = themes.dracula;
 const isGithubPagesEnv = process.env.GITHUB_PAGES_ENV === 'true';
+const newDocsUrl = 'https://fleetbase.io/docs';
+
+function redirectToNewDocsPlugin() {
+    return {
+        name: 'redirect-to-new-docs',
+        injectHtmlTags() {
+            return {
+                headTags: [
+                    {
+                        tagName: 'meta',
+                        attributes: {
+                            'http-equiv': 'refresh',
+                            content: `0;url=${newDocsUrl}`,
+                        },
+                    },
+                    {
+                        tagName: 'link',
+                        attributes: {
+                            rel: 'canonical',
+                            href: newDocsUrl,
+                        },
+                    },
+                    {
+                        tagName: 'script',
+                        innerHTML: `window.location.replace('${newDocsUrl}');`,
+                    },
+                ],
+            };
+        },
+    };
+}
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -58,6 +89,7 @@ const config = {
     ],
 
     plugins: [
+        redirectToNewDocsPlugin,
         'docusaurus-plugin-image-zoom',
         [
             '@scalar/docusaurus',
